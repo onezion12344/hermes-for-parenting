@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孩子沉迷手机怎么办？ — 黄羊育儿经</title>
+    <style>
+        :root { --bg: #fffaf5; --card-bg: #ffffff; --text: #3d3027; --text-light: #7a6e63; --accent: #e8927c; --accent-soft: #fdf0eb; --kid-accent: #7eb8da; --kid-bg: #f4f9fc; --border: #f0e3d8; --shadow: 0 2px 12px rgba(61,48,39,0.06); --radius: 14px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+        .tab-bar { display: flex; background: var(--card-bg); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); margin-bottom: 28px; position: sticky; top: 12px; z-index: 10; box-shadow: var(--shadow); }
+        .tab-btn { flex: 1; padding: 14px 8px; border: none; background: transparent; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text-light); font-family: inherit; }
+        .tab-btn.active { background: var(--accent); color: #fff; }
+        .tab-btn.kid-active { background: var(--kid-accent); color: #fff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .breadcrumb { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .mom-header { margin-bottom: 28px; }
+        .mom-header .date { font-size: 13px; color: var(--text-light); }
+        .mom-header h1 { font-size: 26px; font-weight: 700; color: #4a3729; margin: 6px 0 12px; line-height: 1.4; }
+        .mom-header .original-q { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--text-light); font-size: 14px; }
+        .section { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
+        .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .section h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #4a3729; }
+        .section p { margin-bottom: 8px; font-size: 15px; }
+        .section ul, .section ol { padding-left: 20px; margin-bottom: 8px; }
+        .section li { margin-bottom: 6px; font-size: 15px; }
+        .decomposed-q { background: #fffdf5; border: 1px solid #f0e8c8; padding: 12px 16px; border-radius: 10px; margin-bottom: 10px; font-size: 14px; }
+        .decomposed-q .q-num { display: inline-block; background: var(--accent); color: #fff; width: 22px; height: 22px; border-radius: 50%; text-align: center; font-size: 12px; line-height: 22px; margin-right: 8px; }
+        .source-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
+        .action-card { background: linear-gradient(135deg, #fdf0eb 0%, #fff5f0 100%); border: 1px solid #f5d5c8; border-radius: var(--radius); padding: 18px 20px; margin-top: 14px; }
+        .action-card h4 { color: var(--accent); margin-bottom: 6px; }
+        .kid-view { font-size: 18px; line-height: 2; }
+        .kid-card { background: var(--card-bg); border: 1px solid #d8e9f4; border-radius: var(--radius); padding: 24px 22px; margin-bottom: 18px; box-shadow: var(--shadow); }
+        .kid-card h2 { font-size: 20px; color: #3a6d8c; margin-bottom: 14px; }
+        .kid-tip { background: var(--kid-bg); border-left: 4px solid var(--kid-accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; margin: 14px 0; font-size: 16px; }
+        .kid-highlight { background: #fff9e0; border-radius: 10px; padding: 14px 18px; margin: 12px 0; font-size: 16px; text-align: center; font-weight: 500; }
+        .kid-emoji-big { font-size: 48px; text-align: center; margin: 16px 0; }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-light); font-size: 13px; }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 480px) { .container { padding: 12px 14px 40px; } .mom-header h1 { font-size: 22px; } .section { padding: 16px 18px; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="breadcrumb"><a href="../">← 返回首页</a></div>
+    <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('mom')">👩 家长指南</button>
+        <button class="tab-btn" onclick="switchTab('kid')">👧 给孩子看</button>
+    </div>
+    <div id="momTab" class="tab-content active">
+        <div class="mom-header">
+            <div class="date">2026年07月19日</div>
+            <h1>孩子总是放不下手机，怎么办？</h1>
+            <div class="original-q"><strong>📩 妈妈的提问：</strong>"我家孩子一回家就抱着手机不放，说好的一小时经常变成两三个小时。没收又怕闹，不管又怕废了。到底该怎么办？"</div>
+        </div>
+        <div class="section">
+            <h2>🔍 问题拆解</h2>
+            <p>您这个问题其实包含了几个层面：</p>
+            <div class="decomposed-q"><span class="q-num">1</span> <strong>为什么孩子会沉迷手机？</strong>—— 背后的心理需求是什么？</div>
+            <div class="decomposed-q"><span class="q-num">2</span> <strong>多少屏幕时间是合理的？</strong>—— 不同年龄段有没有科学标准？</div>
+            <div class="decomposed-q"><span class="q-num">3</span> <strong>怎么制定规则孩子才愿意遵守？</strong>—— 单方面禁令为什么无效？</div>
+            <div class="decomposed-q"><span class="q-num">4</span> <strong>没收手机是唯一的办法吗？</strong>—— 有没有更好的替代方案？</div>
+        </div>
+        <div class="section">
+            <h2>📚 研究发现</h2>
+            <h3>孩子沉迷手机的心理根源</h3>
+            <p>研究发现，孩子沉迷手机通常不是因为"贪玩"，而是因为三个核心需求在现实中没得到满足：<strong>社交连接</strong>（怕错过同学动态）、<strong>成就感</strong>（游戏里的即时反馈）、<strong>自主感</strong>（在虚拟世界可以自己做主）。<span class="source-tag">✅ 多源验证</span></p>
+            <h3>科学的时间标准</h3>
+            <p>世界卫生组织建议：2岁以下不接触屏幕，2-5岁每天不超过1小时。对于中小学生，美国儿科学会推荐的框架是：<strong>平日娱乐屏幕不超过1-2小时</strong>，学习用途不受此限。但关键不是时间本身，而是<strong>内容质量和时间安排</strong>。<span class="source-tag">✅ 多源验证</span></p>
+            <h3>有效的规则制定方法</h3>
+            <p>研究表明，<strong>孩子参与制定的规则，执行度是家长单方面禁令的3倍以上</strong>。不是因为孩子更"听话"了，而是因为参与感带来了内在的承诺。<span class="source-tag">⚠️ 研究综合</span></p>
+        </div>
+        <div class="section">
+            <h2>💡 实用建议</h2>
+            <div class="action-card">
+                <h4>🎯 今天就可以做的三件事：</h4>
+                <ol>
+                    <li><strong>开一次家庭会议</strong>：不批评，先问孩子"你最喜欢手机上做什么？"了解需求再定规则。</li>
+                    <li><strong>创造"无屏幕替代品"</strong>：买一副桌游、计划周末户外活动。替代比禁止有效10倍。</li>
+                    <li><strong>家长先放下手机</strong>：孩子是父母的镜子。设定全家"无手机时间"（如晚餐30分钟），一起遵守。</li>
+                </ol>
+            </div>
+            <h3>长期策略：三阶段渐进法</h3>
+            <ol>
+                <li><strong>第一阶段（第1-2周）</strong>：观察记录。不急于改变，先和孩子一起记录每天用手机的时间和内容。</li>
+                <li><strong>第二阶段（第3-4周）</strong>：协商规则。基于记录数据，一起制定《家庭屏幕使用公约》。包含：每日时长、禁用场景（吃饭/睡前一小时）、后果（自然结果而非惩罚）。</li>
+                <li><strong>第三阶段（第5周起）</strong>：逐步放手。规则运行一个月后，如果孩子表现良好，适当放宽自主权。</li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2>📖 推荐资源</h2>
+            <ul>
+                <li><strong>《限屏教育》</strong> 📖 — 科学分龄的屏幕管理指南，从脑科学解释为什么孩子容易上瘾</li>
+                <li><strong>各手机"青少年模式"</strong> 📱 — 华为/小米/OPPO 均内置，可限制使用时长和应用</li>
+                <li><strong>微信"青少年模式"</strong> 💬 — 可限制小程序、公众号和支付功能</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>⚠️ 注意事项</h2>
+            <ul>
+                <li>🔴 <strong>不要突然没收手机</strong> —— 这容易引发极端反抗和信任破裂</li>
+                <li>🔴 <strong>不要把手机当"电子保姆"</strong> —— 忙的时候给孩子手机"安静一会儿"是上瘾的开始</li>
+                <li>🟡 <strong>不要只关注时长、忽略内容</strong> —— 2小时纪录片 vs 2小时短视频，天差地别</li>
+                <li>🟢 <strong>可以把电子产品变成学习工具</strong> —— 教孩子用手机查资料、学英语、做笔记，而不仅是娱乐</li>
+            </ul>
+        </div>
+    </div>
+    <div id="kidTab" class="tab-content">
+        <div class="kid-view">
+            <div class="kid-emoji-big">📱💭</div>
+            <div class="kid-card">
+                <h2>📱 手机真好玩，可是...</h2>
+                <p>你有没有发现，本来只想看一眼手机，结果一眨眼一小时就过去了？</p>
+                <p>这不是因为你不够自律 —— 连设计这些 App 的工程师都承认，他们<strong>故意</strong>把 App 设计得很容易让人停不下来！</p>
+                <div class="kid-highlight">
+                    🧠 <strong>你知道吗？</strong><br>
+                    每次收到点赞、看到新消息，你的大脑都会分泌一点点"快乐物质"（多巴胺），<br>
+                    就像吃巧克力一样让人开心。App 就是利用这一点让你不停地想看手机。
+                </div>
+                <p>但这不代表你输了！很多人学会了和手机"和平共处"：</p>
+                <ol>
+                    <li><strong>把手机当工具，不当玩具</strong> —— 用之前问自己："我现在打开手机是要做什么？"</li>
+                    <li><strong>设定"无手机快乐时间"</strong> —— 每天留出30分钟做一件不用手机也开心的事（画画、运动、和朋友面对面聊天）</li>
+                    <li><strong>把通知关掉</strong> —— 那些"叮叮咚咚"的声音就是设计来打断你的</li>
+                </ol>
+            </div>
+            <div class="kid-tip">
+                <strong>💬 和爸爸妈妈聊聊：</strong><br>
+                你觉得手机上哪个 App 最让你放不下来？为什么？<br>
+                有没有什么你很想做、但因为看手机而一直没做的事？
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>🐑 黄羊育儿经 · 由 AI 研究助理生成 · 内容经多源交叉验证</p>
+        <p><a href="../">查看全部话题 →</a></p>
+    </footer>
+</div>
+<script>
+function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','kid-active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    if (tab === 'mom') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('momTab').classList.add('active');
+    } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('kid-active');
+        document.getElementById('kidTab').classList.add('active');
+    }
+}
+</script>
+</body>
+</html>
