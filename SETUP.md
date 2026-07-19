@@ -2,7 +2,7 @@
 
 ## Overview
 
-黄羊育儿经 (Yellow Sheep Parenting Guide) is an AI-powered parenting advisor for a Hong Kong mom with a 13-year-old daughter on the DSE track.
+黄羊成长记 (Yellow Sheep Parenting Guide) is an AI-powered parenting advisor for a Hong Kong mom with a 13-year-old daughter on the DSE track.
 
 **Core workflow:**
 ```
