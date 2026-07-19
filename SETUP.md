@@ -19,10 +19,20 @@ Hermes profiles provide full data isolation out of the box:
 - Zero risk of parenting data leaking into Harry's personal profile
 - WeChat iLink Bot API works from Mac (already set up)
 
-E2B was considered but adds complexity without benefit here:
-- WeChat connectivity requires the iLink Bot HTTP API (works from anywhere, not macOS-specific)
-- GitHub Pages already provides cloud hosting for the HTML output
-- Hermes profile isolation is sufficient for data separation
+E2B was considered for 24/7 cloud operation but deferred as Phase 2:
+- E2B sandboxes are fully isolated Linux VMs — even under the same account, Sandbox A cannot access Sandbox B's filesystem
+- User already has products on E2B; parenting sandbox would be completely independent
+- Hobby tier: free with $100 credit, 1-hour max session per sandbox
+- Pro tier: $150/month + compute (~$72/month for 24/7 2vCPU)
+- Cheaper approach: wake-on-demand (sandbox spins up every 2-3 min to poll, runs only minutes/day)
+
+**Decision: Phase 1 = Hermes profile on Mac local. Phase 2 = E2B cloud fallback if mom frequently messages when Mac is off.**
+
+Rationale:
+- Mom's usage patterns are unknown — premature to pay for 24/7 cloud
+- WeChat iLink Bot API is HTTP-based, will work from E2B Linux when needed
+- Hermes profile data can be cloned to E2B sandbox when migrating
+- GitHub Pages already provides 24/7 cloud web hosting (free)
 
 ### Why GitHub Pages (not Notion, not PDF)?
 
@@ -99,8 +109,17 @@ These are NEVER deployed to GitHub Pages. They exist only in the local Hermes pr
 
 ## Future Ideas
 
-1. **DSE English resource finder** — tailored to DSE exam requirements
-2. **Teen girl content module** — age-appropriate content for 13-year-old girls
-3. **Conversation script generator** — exact phrases mom can use
+1. **DSE English resource finder** — tailored to DSE exam requirements (English is the key subject for DSE → international transfer)
+2. **Teen girl content module** — age-appropriate content for 13-year-old girls (hygiene, body changes, emotions)
+3. **Conversation script generator** — exact phrases mom can use (she needs "具体怎么做" guidance)
 4. **Daily micro-action card** — one tiny action per day, zero thinking required
 5. **Progress tracker** — track which suggestions mom tried and how they went
+6. **Phase 2: E2B cloud fallback** — deploy Hermes parenting gateway to E2B sandbox for 24/7 availability when Mac is off
+
+## Key Design Constraints (from real conversations)
+
+- Sister's grades are B+ — the problem is NOT academics, it's life habits, autonomy, and parent-child communication
+- Mom already uses DeepSeek for parenting advice — she is AI-literate and receptive to an AI assistant
+- Mom's core need: "具体怎么做？" — concrete, script-level guidance, not theory
+- Education philosophy: 引导 > 灌输, 身教 > 言传, EQ > grades, health > cramming
+- DSE self-study is viable (proven by the older sibling's own experience)
