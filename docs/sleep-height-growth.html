@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13歲熬夜影響長高嗎？ — 黃羊成長記</title>
+    <style>
+        :root {
+            --bg: #fffaf5;
+            --card-bg: #ffffff;
+            --text: #3d3027;
+            --text-light: #7a6e63;
+            --accent: #e8927c;
+            --accent-soft: #fdf0eb;
+            --kid-accent: #7eb8da;
+            --kid-bg: #f4f9fc;
+            --border: #f0e3d8;
+            --shadow: 0 2px 12px rgba(61,48,39,0.06);
+            --radius: 14px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, "PingFang SC", "PingFang HK", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+
+        /* Tabs */
+        .tab-bar {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 28px;
+            position: sticky;
+            top: 12px;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 14px 8px;
+            border: none;
+            background: transparent;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-light);
+            font-family: inherit;
+        }
+        .tab-btn.active {
+            background: var(--accent);
+            color: #fff;
+        }
+        .tab-btn.kid-active {
+            background: var(--kid-accent);
+            color: #fff;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Breadcrumb */
+        .breadcrumb { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+
+        /* Mom View Styles */
+        .mom-header { margin-bottom: 28px; }
+        .mom-header .date { font-size: 13px; color: var(--text-light); }
+        .mom-header h1 { font-size: 26px; font-weight: 700; color: #4a3729; margin: 6px 0 12px; line-height: 1.4; }
+        .mom-header .original-q {
+            background: var(--accent-soft);
+            border-left: 3px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        .mom-header .original-q strong { color: var(--text); font-style: normal; }
+
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow);
+        }
+        .section h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #4a3729; }
+        .section p { margin-bottom: 8px; font-size: 15px; }
+        .section ul, .section ol { padding-left: 20px; margin-bottom: 8px; }
+        .section li { margin-bottom: 6px; font-size: 15px; }
+
+        .decomposed-q {
+            background: #fffdf5;
+            border: 1px solid #f0e8c8;
+            padding: 12px 16px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .decomposed-q .q-num {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 12px;
+            line-height: 22px;
+            margin-right: 8px;
+        }
+
+        .source-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            margin-left: 4px;
+        }
+        .source-tag.unverified { background: #fff3e0; color: #e65100; }
+
+        .action-card {
+            background: linear-gradient(135deg, #fdf0eb 0%, #fff5f0 100%);
+            border: 1px solid #f5d5c8;
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            margin-top: 14px;
+        }
+        .action-card h4 { color: var(--accent); margin-bottom: 6px; }
+
+        .do-dont {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 14px 0;
+        }
+        .do-box {
+            background: #e8f5e9;
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 4px solid #4caf50;
+        }
+        .dont-box {
+            background: #ffebee;
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 4px solid #f44336;
+        }
+        .do-box h5 { color: #2e7d32; margin-bottom: 4px; font-size: 14px; }
+        .dont-box h5 { color: #c62828; margin-bottom: 4px; font-size: 14px; }
+
+        .highlight-box {
+            background: #fff9e0;
+            border-left: 4px solid #ffc107;
+            padding: 12px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .script-box {
+            background: #fff8e1;
+            border: 2px dashed #f5b041;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 12px 0;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .step-num {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 13px;
+            line-height: 24px;
+            margin-right: 6px;
+        }
+
+        /* Kid View Styles */
+        .kid-view { font-size: 18px; line-height: 2; }
+
+        .kid-card {
+            background: var(--card-bg);
+            border: 1px solid #d8e9f4;
+            border-radius: var(--radius);
+            padding: 24px 22px;
+            margin-bottom: 18px;
+            box-shadow: var(--shadow);
+        }
+        .kid-card h2 {
+            font-size: 20px;
+            color: #3a6d8c;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .kid-tip {
+            background: var(--kid-bg);
+            border-left: 4px solid var(--kid-accent);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 14px 0;
+            font-size: 16px;
+        }
+
+        .kid-highlight {
+            background: #fff9e0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 12px 0;
+            font-size: 16px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .kid-emoji-big { font-size: 48px; text-align: center; margin: 16px 0; }
+
+        .warning-card {
+            background: #fff5f5;
+            border: 2px solid #e57373;
+            border-radius: 10px;
+            padding: 16px 18px;
+            margin: 14px 0;
+        }
+        .warning-card h4 { color: #c62828; margin-bottom: 6px; }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 13px;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        @media (max-width: 480px) {
+            .container { padding: 12px 14px 40px; }
+            .mom-header h1 { font-size: 22px; }
+            .section { padding: 16px 18px; }
+            .do-dont { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="breadcrumb"><a href="../">← 返回首頁</a></div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('mom')">👩 家長指南</button>
+        <button class="tab-btn" onclick="switchTab('kid')">👧 給妹妹看</button>
+    </div>
+
+    <!-- ========== MOM VIEW ========== -->
+    <div id="momTab" class="tab-content active">
+
+        <div class="mom-header">
+            <div class="date">2026 年 7 月 20 日</div>
+            <h1>13 歲凌晨 2 點睡覺，會影響長高嗎？</h1>
+            <div class="original-q"><strong>📩 媽媽的提問：</strong>「13歲的孩子2點睡覺會影響長高嗎？」</div>
+        </div>
+
+        <div class="section">
+            <h2><span class="emoji">🔍</span>直接答案</h2>
+            <p><strong>會。而且影響不小。</strong></p>
+            <p>但不是因為「2 點」這個時間本身——而是因為這代表<strong>深度睡眠被嚴重壓縮</strong>，而生長激素恰恰在深度睡眠時分泌最旺盛。</p>
+            <p>好消息是：這是<strong>可以改善的</strong>。而且方法不是靠罵和罰。</p>
+        </div>
+
+        <div class="section">
+            <h2><span class="emoji">🧬</span>科學解釋</h2>
+
+            <h3>生長激素的「夜間工作模式」</h3>
+            <p>人體約 <strong>70% 的生長激素</strong>在夜間分泌。分泌高峰不出現在某個固定時間點（不是「10 點前一定要睡」），而是出現在：<strong>入睡後第一個深度睡眠週期（約睡著後 1-2 小時）</strong>。<span class="source-tag">PMC 2024</span></p>
+
+            <div class="highlight-box">
+                <strong>關鍵不是「幾點睡」，而是「睡了多久深度睡眠」。</strong><br>
+                如果凌晨 2 點才睡、7 點又要起床上學——總睡眠只有 5 小時，深度睡眠可能不到 1 小時。生長激素大量流失。
+            </div>
+
+            <h3>青春期生理時差——不是她故意對抗你</h3>
+            <p>青春期孩子的<strong>褪黑激素（melatonin）分泌時間比成人延遲 1-3 小時</strong>。美國兒科學會形容這就像「永久時差」。加上 iPad 藍光會進一步推遲褪黑激素分泌，她真的<strong>生理上</strong>不容易早睡。<span class="source-tag">Simply Psychology 2026</span></p>
+
+            <h3>不只是身高</h3>
+            <p>長期睡眠不足的青少年，除了影響身高，還影響：</p>
+            <ul>
+                <li><strong>記憶力與學習能力</strong>——睡眠是大腦整理資訊的時間</li>
+                <li><strong>情緒調節</strong>——睡眠不足的孩子更容易煩躁、焦慮、對抗</li>
+                <li><strong>免疫力</strong>——更容易生病</li>
+                <li><strong>體重</strong>——睡眠不足會增加肥胖風險 <span class="source-tag">ScienceDirect 2019</span></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="emoji">💡</span>實用建議</h2>
+
+            <h3>第一步：先分享科學，不要先下命令</h3>
+            <p>讓她知道「唔係你曳，係身體嘅原因」。這是破冰的關鍵。</p>
+
+            <div class="script-box">
+                「我最近先知，原來你哋呢個年紀，身體嘅褪黑激素會遲啲先分泌㗎。即係你夜瞓，唔係因為你唔聽話，係青春期嘅正常現象。不如我哋一齊傾下點樣幫到你？」
+            </div>
+
+            <h3>第二步：讓她說「你覺得幾點合理」</h3>
+            <p>不要你定時間。讓她先說。她說 12 點，你可以商量 11:30。商量出來的規則，她才會遵守。</p>
+
+            <h3>第三步：全家一起做</h3>
+            <p>睡前一小時，iPad 放客廳充電，不入房。你的手機也一起放。<strong>你帶頭做，她才會跟。</strong></p>
+
+            <h3>快速對比</h3>
+            <div class="do-dont">
+                <div class="do-box">
+                    <h5>✅ 試試這樣講</h5>
+                    <p>「我留意到你最近好夜先瞓，我擔心你嘅身體。不如我哋一齊傾下點樣可以早少少？」</p>
+                </div>
+                <div class="dont-box">
+                    <h5>❌ 而不是</h5>
+                    <p>「你又咁夜瞓！唔准再玩 iPad！即刻熄機！」</p>
+                </div>
+            </div>
+            <div class="do-dont">
+                <div class="do-box">
+                    <h5>✅ 試試這樣做</h5>
+                    <p>睡前一小時，iPad 放客廳充電。你和她的裝置<strong>都放</strong>。你帶頭。</p>
+                </div>
+                <div class="dont-box">
+                    <h5>❌ 而不是</h5>
+                    <p>只收她的 iPad，自己繼續在床上睇手機。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="emoji">⚠️</span>安全提醒</h2>
+
+            <div class="warning-card">
+                <h4>🚫 不要自行給 13 歲孩子吃褪黑素</h4>
+                <p>褪黑素是<strong>激素</strong>，不是糖果。青少年發育期額外攝入的長遠影響，尚無足夠研究。她的褪黑素只是「遲到」，不是「缺席」——靠環境調節（光線、螢幕、規律）即可。如睡眠問題持續影響日間精神，應帶她看兒科醫生。</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><span class="emoji">📖</span>推薦資源</h2>
+            <ul>
+                <li><strong>親子易點明</strong>（衞生署）：<a href="https://smartparentnet.hk" target="_blank">smartparentnet.hk</a> —— 青少年健康睡眠指南</li>
+                <li><strong>香港學生健康服務</strong>：<a href="https://www.studenthealth.gov.hk" target="_blank">studenthealth.gov.hk</a> —— 睡眠與成長發育</li>
+                <li><strong>3P 親子正策課程</strong>（Triple P）：衞生署提供，免費正面管教課程</li>
+                <li><strong>相關話題</strong>：<a href="sleep-teen.html">青春期夜瞓唔肯瞓，點算？</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== KID VIEW ========== -->
+    <div id="kidTab" class="tab-content">
+
+        <div class="kid-view">
+            <div class="kid-emoji-big">😴 → 📏</div>
+
+            <div class="kid-card">
+                <h2>💤 夜瞓真係會影響長高㗎！但唔係你嘅錯</h2>
+
+                <p>講個秘密俾你知：<strong>你夜瞓，唔係因為你曳。</strong></p>
+
+                <p>科學家發現，13-17 歲嘅青少年，身體入面嘅「瞓覺荷爾蒙」（褪黑激素）會比大人遲 1-3 個鐘先開始分泌。即係話：</p>
+
+                <div class="kid-highlight">
+                    你想 11 點瞓著，但身體覺得而家先 9 點。<br>
+                    呢個係<strong>青春期正常現象</strong>，唔係你嘅錯。
+                </div>
+
+                <h3>📏 但點解要早啲瞓？</h3>
+
+                <p>你身體嘅「長高荷爾蒙」（生長激素），每日最大嘅分泌爆發，發生喺<strong>你瞓著後嘅第一個深度睡眠</strong>入面。</p>
+
+                <p>如果你 2 點先瞓、7 點起身返學：</p>
+                <ul>
+                    <li>你只瞓咗 5 個鐘（13 歲需要 8-10 個鐘）</li>
+                    <li>深度睡眠可能唔夠 1 個鐘</li>
+                    <li>生長激素大量流失</li>
+                    <li>唔止影響身高，仲影響記性、情緒、皮膚（痘痘！）</li>
+                </ul>
+
+                <div class="kid-highlight">
+                    <strong>簡單講：你想長高、想皮膚好、想考試記到嘢？</strong><br>
+                    俾身體足夠嘅深度睡眠啦。
+                </div>
+
+                <h3>🎮 你可以試嘅小實驗</h3>
+
+                <p><span class="step-num">1</span> 今晚，睡前一個鐘，iPad 放出廳叉電。唔帶入房。</p>
+                <p><span class="step-num">2</span> 試一個星期：每晚比平時早半個鐘熄燈。</p>
+                <p><span class="step-num">3</span> 觀察自己：朝早起身有冇精神咗？啲痘痘有冇好啲？</p>
+                <p><span class="step-num">4</span> 如果做到，同媽咪講：「我試咗一星期早啲瞓，我覺得呢度好咗！」</p>
+            </div>
+
+            <div class="kid-tip">
+                <strong>💬 同媽咪傾下：</strong><br>
+                「媽咪，我都想有規律啲。不如我哋一齊定個時間——十一點半熄燈，睡前一個鐘 iPad 放廳。你陪我試一個星期？」
+            </div>
+
+            <div class="kid-card">
+                <h2>🌟 記住呢句</h2>
+                <p style="text-align: center; font-size: 20px; padding: 10px 0;">
+                    你夜瞓 <strong>≠</strong> 你曳。<br>
+                    早啲瞓 <strong>=</strong> 幫自己長高、皮膚好、記性好。<br>
+                    係為咗你自己，唔係為咗聽話。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🐑 黃羊成長記 · 由 AI 研究助理生成</p>
+        <p>內容經過多源交叉驗證，僅供參考 · 如持續擔憂請諮詢兒科醫生</p>
+        <p><a href="../">查看全部話題 →</a></p>
+    </footer>
+</div>
+
+<script>
+function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','kid-active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    if (tab === 'mom') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('momTab').classList.add('active');
+    } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('kid-active');
+        document.getElementById('kidTab').classList.add('active');
+    }
+}
+</script>
+</body>
+</html>
