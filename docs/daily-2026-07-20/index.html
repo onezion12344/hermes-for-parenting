@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄羊早报 | 2026年07月20日 — 黄羊成长记</title>
+    <style>
+        :root { --bg: #fffaf5; --card-bg: #ffffff; --text: #3d3027; --text-light: #7a6e63; --accent: #e8927c; --accent-soft: #fdf0eb; --kid-accent: #7eb8da; --kid-bg: #f4f9fc; --border: #f0e3d8; --shadow: 0 2px 12px rgba(61,48,39,0.06); --radius: 14px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+        .tab-bar { display: flex; background: var(--card-bg); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); margin-bottom: 28px; position: sticky; top: 12px; z-index: 10; box-shadow: var(--shadow); }
+        .tab-btn { flex: 1; padding: 14px 8px; border: none; background: transparent; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text-light); font-family: inherit; }
+        .tab-btn.active { background: var(--accent); color: #fff; }
+        .tab-btn.kid-active { background: var(--kid-accent); color: #fff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .breadcrumb { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .mom-header { margin-bottom: 28px; }
+        .mom-header .date { font-size: 13px; color: var(--text-light); }
+        .mom-header h1 { font-size: 26px; font-weight: 700; color: #4a3729; margin: 6px 0 12px; line-height: 1.4; }
+        .mom-header .original-q { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--text-light); font-size: 14px; }
+        .mom-header .original-q strong { color: var(--text); font-style: normal; }
+        .section { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
+        .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .section h2 .emoji { font-size: 22px; }
+        .section h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #4a3729; }
+        .section p { margin-bottom: 8px; font-size: 15px; }
+        .section ul, .section ol { padding-left: 20px; margin-bottom: 8px; }
+        .section li { margin-bottom: 6px; font-size: 15px; }
+        .source-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
+        .source-tag.verified { background: #e8f5e9; color: #2e7d32; }
+        .source-tag.gov { background: #e3f2fd; color: #1565c0; }
+        .action-card { background: linear-gradient(135deg, #fdf0eb 0%, #fff5f0 100%); border: 1px solid #f5d5c8; border-radius: var(--radius); padding: 18px 20px; margin-top: 14px; }
+        .action-card h4 { color: var(--accent); margin-bottom: 6px; }
+        .daily-summary { background: linear-gradient(135deg, #fff9e6 0%, #fff5e6 100%); border: 1px solid #f0d88a; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 8px; }
+        .daily-summary h3 { color: #b8860b; margin-bottom: 4px; font-size: 15px; }
+        .daily-summary p { font-size: 14px; color: var(--text-light); margin: 0; }
+        .kid-view { font-size: 18px; line-height: 2; }
+        .kid-card { background: var(--card-bg); border: 1px solid #d8e9f4; border-radius: var(--radius); padding: 24px 22px; margin-bottom: 18px; box-shadow: var(--shadow); }
+        .kid-card h2 { font-size: 20px; color: #3a6d8c; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .kid-tip { background: var(--kid-bg); border-left: 4px solid var(--kid-accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; margin: 14px 0; font-size: 16px; }
+        .kid-highlight { background: #fff9e0; border-radius: 10px; padding: 14px 18px; margin: 12px 0; font-size: 16px; text-align: center; font-weight: 500; }
+        .kid-emoji-big { font-size: 36px; text-align: center; margin: 16px 0; }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-light); font-size: 13px; }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 480px) {
+            .container { padding: 12px 14px 40px; }
+            .mom-header h1 { font-size: 22px; }
+            .section { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="breadcrumb"><a href="../">← 返回首页</a></div>
+
+    <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('mom')">👩 家长指南</button>
+        <button class="tab-btn" onclick="switchTab('kid')">👧 给孩子看</button>
+    </div>
+
+    <!-- ========== MOM VIEW ========== -->
+    <div id="momTab" class="tab-content active">
+
+        <div class="mom-header">
+            <div class="date">2026年07月20日 星期一</div>
+            <h1>☀️ 黄羊早报 | 2026年07月20日</h1>
+            <div class="original-q"><strong>📰 今日聚焦：</strong>AI教育新工具全面开花、DSE放榜周关键信息、国家"五健"计划守护青少年健康 —— 黄羊为您精选过去一周最重要的育儿资讯。</div>
+        </div>
+
+        <!-- ===== AI 教育 ===== -->
+        <div class="section">
+            <h2><span class="emoji">🤖</span>AI 教育新进展</h2>
+
+            <div class="daily-summary">
+                <h3>📌 一句话总结</h3>
+                <p>从清华的"对话即学习"到Anthropic的教师版Claude，AI正在以前所未有的方式改变孩子的学习方式——家长需要了解这场变革。</p>
+            </div>
+
+            <h3>1. 清华团队推出 AI Cosmos："对话即学习"的下一代学习工具</h3>
+            <p>清华大学计算机系CoAI课题组王宏宁教授团队推出免费AI学习产品 <strong>AI Cosmos</strong>（aicosmos.ai）。这款工具的核心理念是"对话即学习"——知识不再只是被解释，而是真正被看见、被操作、被理解。<span class="source-tag verified">可信度：高</span></p>
+            <ul>
+                <li>支持多人+多智能体角色参与互动，沉浸式讨论</li>
+                <li>可在对话流中唤起互动黑板、互动实验、互动视频、互动讲义</li>
+                <li>新推出"云课堂"功能，从备课到教学复盘一站式打通</li>
+                <li>已在清华校内完成多轮实证研究，并在多地中小学开展试点</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：36氪/多知网，2026年7月16日</p>
+
+            <h3>2. 教育部等五部门发布《"人工智能+教育"行动计划》</h3>
+            <p>教育部、国家发改委、工信部、科技部、国家数据局五部门联合印发该计划（教科信〔2026〕1号），这是国家层面对AI教育的顶层设计。<span class="source-tag gov">官方文件</span></p>
+            <ul>
+                <li><strong>中小学层面：</strong>加快普及AI教育，开齐开足AI相关课程，纳入地方课程体系</li>
+                <li><strong>教师层面：</strong>制定教师智能素养标准，将AI纳入教师资格考试</li>
+                <li><strong>学生学习：</strong>研发智能学伴，建设学生数字档案，动态优化学习路径</li>
+                <li><strong>目标：</strong>到2030年，AI与教育深度融合格局基本形成</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：中国政府网 www.gov.cn，2026年4月2日发布</p>
+
+            <h3>3. Claude for Teachers 进军 K12 教育</h3>
+            <p>Anthropic于7月14日正式发布 <strong>Claude for Teachers</strong>，面向美国K12教师免费开放。支持匹配50个州课程标准、备课、课堂设计、学习分析——AI从"帮学生答题"升级为"帮老师教学"。<span class="source-tag verified">可信度：高</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：36氪/多鲸，2026年7月17日</p>
+
+            <h3>4. WAIC 2026：AI教育产品全面亮相</h3>
+            <p>2026世界人工智能大会（7月17-20日，上海）展示了大量AI教育产品：科大讯飞AI学习机T90、面向青少年的"AI Young"一站式平台、AI家教、智能学伴等——标志着AI教育从概念走向大规模落地。<span class="source-tag verified">可信度：高</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：芥末堆看教育，2026年7月18日</p>
+
+            <div class="action-card">
+                <h4>🐑 黄羊建议</h4>
+                <p>国家已经明确将AI教育纳入中小学课程体系。作为家长，现在就可以让孩子接触一些优质的AI学习工具（如可汗学院的AI辅导、国内的AI学习应用），同时引导孩子<strong>学会向AI提出好问题</strong>——这将是未来最重要的技能之一。</p>
+            </div>
+        </div>
+
+        <!-- ===== DSE 动态 ===== -->
+        <div class="section">
+            <h2><span class="emoji">📚</span>DSE / 教育政策动态</h2>
+
+            <div class="daily-summary">
+                <h3>📌 一句话总结</h3>
+                <p>DSE 2026已于7月15日放榜，今年诞生24位状元，JUPAS改选正在进行中——暨大华大等内地高校也在火热招生。</p>
+            </div>
+
+            <h3>1. DSE 2026 放榜：24位状元，20人留港读医</h3>
+            <p>2026年DSE于7月15日（上周三）放榜，今年共诞生<strong>24位状元</strong>（7科5**），其中20人选择留港读医，1人赴英留学。香港华仁书院诞生首位有先天眼疾的状元，沙田崇真中学诞生首位来自中一成绩下游逆袭的状元。<span class="source-tag verified">可信度：高</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：星岛头条、香港01，2026年7月15日</p>
+
+            <h3>2. JUPAS改选进行中（7月16-18日）+ 今日是改选最后机会！</h3>
+            <p><strong>⚠️ 注意：</strong>JUPAS免费改选时段为7月16-18日，今天（7月20日）免费改选已截止。如需修改需缴付港币250元，且须在7月18日下午1:15前完成（已过期）。但<strong>成绩覆核（Appeal）申请截止日为7月20日</strong>——今天是最后一天！</p>
+            <ul>
+                <li>JUPAS正式遴选结果公布：<strong>8月5日</strong></li>
+                <li>成绩覆核结果公布：<strong>8月12日</strong></li>
+                <li>覆核后改选：<strong>8月13日</strong></li>
+                <li>JUPAS补选结果公布：<strong>8月25日</strong></li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：JUPAS官网、学友社、hk01，2026年7月</p>
+
+            <h3>3. 内地高校招收DSE学生：暨大华大7月16-22日招生</h3>
+            <p>暨南大学、华侨大学针对DSE考生的招生正在进行（7月16-22日）。此外，教育局"内地高校招收香港中学文凭考试学生计划2026/27"亦已启动，为DSE考生提供更多升学选择。<span class="source-tag gov">官方信息</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：香港教育局 edb.gov.hk，星岛头条，2026年7月</p>
+
+            <h3>4. 教育局更新"中六学生资讯专页"，提供一站式升学支援</h3>
+            <p>教育局整合了DSE放榜提示、e导航升学工具、打气短片、多元出路资讯、支援措施及辅导服务，帮助中六学生和家长规划升学路径。<span class="source-tag gov">官方信息</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：香港政府新闻公报 info.gov.hk，2026年5月28日</p>
+
+            <div class="action-card">
+                <h4>🐑 黄羊建议</h4>
+                <p>如果家中有DSE考生，<strong>今天（7月20日）是成绩覆核（Appeal）申请的最后一天</strong>！如果对成绩有疑虑务必今天提交。同时可以关注8月5日的JUPAS正式遴选结果。内地升学方面，暨大华大招生到7月22日截止，有意向的家庭请抓紧。</p>
+            </div>
+        </div>
+
+        <!-- ===== 健康知识 ===== -->
+        <div class="section">
+            <h2><span class="emoji">💪</span>青少年健康知识</h2>
+
+            <div class="daily-summary">
+                <h3>📌 一句话总结</h3>
+                <p>国家13部门联合发布"五健"计划守护孩子健康，教育部全面推进健康学校建设——体重、视力、心理、骨骼、口腔，五项健康一个都不能少。</p>
+            </div>
+
+            <h3>1. 国家13部门联合发布"五健"促进行动计划（2026-2030）</h3>
+            <p>国家卫健委等13部门联合发布<strong>《儿童青少年"五健"促进行动计划》</strong>，针对五大健康领域设定2030年目标：<span class="source-tag gov">官方文件</span></p>
+            <ul>
+                <li><strong>🏃 体重：</strong>中小学生体质健康达标优良率≥60%，每天体育活动≥2小时</li>
+                <li><strong>👁️ 视力：</strong>初中生近视率降至60%以下，每天户外自然光≥60分钟</li>
+                <li><strong>🧠 心理：</strong>每校配备专（兼）职心理教师100%，每学年至少一次心理讲座</li>
+                <li><strong>🦴 骨骼：</strong>10-16岁每年一次脊柱弯曲异常筛查，注意书包重量和坐姿</li>
+                <li><strong>🦷 口腔：</strong>推广窝沟封闭、局部用氟，养成科学刷牙习惯</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：国家卫健委官网 ndcpa.gov.cn，2025年12月25日发布</p>
+
+            <h3>2. 教育部全面推进健康学校建设</h3>
+            <p>教育部发布《关于全面推进健康学校建设的指导意见》（教体艺〔2026〕3号），提出到2030年健康学校建设覆盖每所学校。重点包括：每天体育活动≥2小时、课间15分钟、心理健康教育全员覆盖、近视防控、体重管理、校园食品安全等。<span class="source-tag gov">官方文件</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：教育部官网 moe.gov.cn，2026年2月26日</p>
+
+            <h3>3. 初中生生长发育黄金期：家长必知的6大健康要点</h3>
+            <p>13-14岁是生长发育的关键转折期，需要特别关注：<span class="source-tag verified">可信度：中</span></p>
+            <ul>
+                <li><strong>生长痛：</strong>膝盖、小腿夜间疼痛是正常现象，适当补钙和拉伸可缓解</li>
+                <li><strong>近视防控：</strong>暑期是近视加深高发期，保证每天户外活动，减少屏幕时间</li>
+                <li><strong>痤疮护理：</strong>青春期荷尔蒙变化导致，科学护肤、避免挤压</li>
+                <li><strong>情绪波动：</strong>大脑前额叶未发育成熟+荷尔蒙变化=情绪过山车，家长需要理解而非指责</li>
+                <li><strong>脊柱健康：</strong>双肩书包、定期调整课桌椅高度、避免单侧负重</li>
+                <li><strong>睡眠质量：</strong>13-16岁建议每晚8-10小时睡眠</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：家庭医生 familydoctor.cn，2026年7月7日</p>
+
+            <h3>4. 暑期特别提醒：屏幕时间与心理调适</h3>
+            <p>暑假期间，青少年容易长时间使用手机和电脑。建议：每天屏幕娱乐时间控制在2小时以内，用眼20-20-20法则（每20分钟看20英尺外20秒），保持规律作息，鼓励孩子参与户外运动和社交活动。如发现孩子持续情绪低落、社交退缩超过两周，应及时寻求专业帮助。心理援助热线：12356（全国）、12355（青少年）。<span class="source-tag verified">可信度：中</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：综合整理，2026年7月</p>
+
+            <div class="action-card">
+                <h4>🐑 黄羊建议</h4>
+                <p>暑假期间，家长可以和孩子一起制定"健康暑假计划"：每天1小时户外活动、1次家庭共同用餐、睡前30分钟无屏幕时间。国家层面已经将青少年健康提升到战略高度，作为家长，我们能做的是<strong>从现在开始，把"五健"落实到日常生活中</strong>。</p>
+            </div>
+        </div>
+
+        <!-- ===== 推荐资源 ===== -->
+        <div class="section">
+            <h2><span class="emoji">📖</span>推荐资源</h2>
+            <ul>
+                <li><strong>AI学习工具：</strong>AI Cosmos（aicosmos.ai）— 清华出品，免费，适合中学生探索互动学习</li>
+                <li><strong>DSE升学：</strong>教育局中六学生资讯专页（edb.gov.hk/s6）— 一站式升学信息</li>
+                <li><strong>DSE升学：</strong>e导航升学工具（enavigator.edb.hkedcity.net）— 输入成绩即可搜索本地课程</li>
+                <li><strong>升学辅导：</strong>青协升学辅导热线 2777 1112 — 周一至六 14:00-02:00</li>
+                <li><strong>心理援助：</strong>12356（全国心理援助）、12355（青少年服务）</li>
+                <li><strong>健康参考：</strong>《儿童青少年"五健"促进行动计划》全文 — ndcpa.gov.cn</li>
+            </ul>
+        </div>
+
+        <!-- ===== 注意事项 ===== -->
+        <div class="section">
+            <h2><span class="emoji">⚠️</span>注意事项</h2>
+            <ul>
+                <li><strong>AI教育工具选择：</strong>市面AI学习工具质量参差不齐，优先选择有教育机构背书的工具，避免让孩子使用未经过滤的通用AI对话（可能产生不当内容）。</li>
+                <li><strong>今天（7月20日）DSE Appeal截止：</strong>这是2026年DSE成绩覆核申请的最后一天，有需要的考生务必今日提交。</li>
+                <li><strong>健康信息仅供参考：</strong>本文健康内容来自公开资料整理，如有具体健康问题，请咨询专业医生。</li>
+                <li><strong>信息来源时效：</strong>部分政策文件发布时间较早（如"五健"计划为2025年12月发布），但均为现行最新版本。</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========== KID VIEW ========== -->
+    <div id="kidTab" class="tab-content">
+
+        <div class="kid-view">
+            <div class="kid-emoji-big">🤖✨</div>
+
+            <div class="kid-card">
+                <h2>🧠 有个超厉害的"AI老师"出现了！</h2>
+                <p>嘿，你有没有想过——如果有个老师可以和你<strong>像聊天一样学习</strong>，而且还能让你<strong>亲自动手做实验</strong>？</p>
+                <p>清华大学的哥哥姐姐们，最近做出了一个叫<strong>AI Cosmos</strong>的工具。它不是那种"我讲你听"的网课，而是——</p>
+
+                <div class="kid-highlight">
+                    💬 你把问题打进去 → AI 不是直接给答案，而是带你去"看到"、"摸到"、"试出来"！
+                </div>
+
+                <p>比如你想学"凸透镜成像"——平时只能看课本上的图对吧？在AI Cosmos里，你可以在屏幕上<strong>自己拖动蜡烛、调节距离</strong>，亲眼看到像怎么变大变小、怎么倒过来！</p>
+                <p>甚至学"钱学森弹道"这种超级难的概念，AI也能把它变成一段你能跟着理解的动态演示 🚀</p>
+                <p>现在已经有好多学校在试用啦。也许再过不久，你的课堂也会变得这么好玩！</p>
+
+                <div class="kid-tip">
+                    <strong>💡 给聪明的你：</strong><br>
+                    以后用AI学习，不是让它"帮你写作业"，而是问它："这个我不懂，能用不一样的方式再讲一遍吗？" —— 学会<strong>提问</strong>，才是最强的超能力！
+                </div>
+            </div>
+
+            <div class="kid-card">
+                <h2>🏃 暑假里，你的身体在悄悄"升级"！</h2>
+                <p>知道吗？13到16岁这个阶段，你的身体正在进行一场<strong>超级大升级</strong> 🦾</p>
+                <p>国家还专门发布了一个叫"五健"的计划来保护你们：</p>
+
+                <div class="kid-highlight">
+                    🏃 每天运动2小时（跑跳打球都算！）<br>
+                    👁️ 每天户外玩至少1小时（对眼睛好！）<br>
+                    🧠 遇到不开心要说出来（打12355可以找到人聊天）<br>
+                    🦴 背双肩书包，坐直了！（脊柱在长呢）<br>
+                    🦷 早晚刷牙，少吃黏黏的糖
+                </div>
+
+                <p>特别是暑假——别整天窝在空调房里刷手机哦！出去骑车、游泳、打球、和朋友玩，你的身体会感谢你的 😎</p>
+            </div>
+
+            <div class="kid-tip">
+                <strong>💬 和爸爸妈妈聊聊：</strong><br>
+                你觉得AI能当你的"学习小伙伴"吗？如果你有一个AI学习助手，你希望它帮你做什么？和爸妈分享一下你的想法吧！
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🐑 黄羊成长记 · 由 AI 研究助理生成</p>
+        <p>内容基于多源公开信息整理，标注可信度，仅供参考</p>
+        <p><a href="../">查看全部话题 →</a></p>
+    </footer>
+</div>
+
+<script>
+function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','kid-active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    if (tab === 'mom') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('momTab').classList.add('active');
+    } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('kid-active');
+        document.getElementById('kidTab').classList.add('active');
+    }
+}
+</script>
+</body>
+</html>
