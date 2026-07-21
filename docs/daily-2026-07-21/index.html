@@ -20,7 +20,7 @@
         .mom-header { margin-bottom: 28px; }
         .mom-header .date { font-size: 13px; color: var(--text-light); }
         .mom-header h1 { font-size: 26px; font-weight: 700; color: #4a3729; margin: 6px 0 12px; line-height: 1.4; }
-        .mom-header .original-q { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0); font-style: italic; color: var(--text-light); font-size: 14px; }
+        .mom-header .original-q { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--text-light); font-size: 14px; }
         .mom-header .original-q strong { color: var(--text); font-style: normal; }
         .section { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
         .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
@@ -29,7 +29,7 @@
         .section p { margin-bottom: 8px; font-size: 15px; }
         .section ul, .section ol { padding-left: 20px; margin-bottom: 8px; }
         .section li { margin-bottom: 6px; font-size: 15px; }
-        .source-tag { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
+        .source-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
         .source-tag.verified { background: #e8f5e9; color: #2e7d32; }
         .source-tag.gov { background: #e3f2fd; color: #1565c0; }
         .action-card { background: linear-gradient(135deg, #fdf0eb 0%, #fff5f0 100%); border: 1px solid #f5d5c8; border-radius: var(--radius); padding: 18px 20px; margin-top: 14px; }
@@ -55,252 +55,143 @@
 <body>
 <div class="container">
     <div class="breadcrumb"><a href="../">← 返回首页</a></div>
-
     <div class="tab-bar">
-        <button class="tab-btn active" onclick="switchTab('mom')">👩 家长指南</button>
-        <button class="tab-btn" onclick="switchTab('kid')">👧 给孩子看</button>
+        <button class="tab-btn active" onclick="switchTab(\'mom\')">👩 家长指南</button>
+        <button class="tab-btn" onclick="switchTab(\'kid\')">👧 给孩子看</button>
     </div>
-
-    <!-- ========== MOM VIEW ========== -->
     <div id="momTab" class="tab-content active">
-
         <div class="mom-header">
-            <div class="date">2026年07月21日 星期二</div>
+            <div class="date">2026年07月21日 星期一</div>
             <h1>☀️ 黄羊早报 | 2026年07月21日</h1>
-            <div class="original-q"><strong>📰 今日聚焦：</strong>世界数字教育大会成果落地、DSE放榜后关键时间节点、青少年心理健康最新数据 —— 黄羊为您精选最新育儿资讯。</div>
+            <div class="original-q"><strong>📰 今日聚焦：</strong>WAIC 2026昨日闭幕，AI教育产品全面开花；DSE状元人数创纪录，明日暨大华大招生截止；上海交大最新研究揭示青少年心理健康"三件套"——黄羊为您精选最新育儿资讯。</div>
         </div>
-
-        <!-- ===== AI 教育 ===== -->
         <div class="section">
             <h2><span class="emoji">🤖</span>AI 教育新进展</h2>
-
-            <div class="daily-summary">
-                <h3>📌 一句话总结</h3>
-                <p>57%家长已在辅导孩子时使用AI，全球AI教育平台落地中国——AI正从"要不要用"变成"怎么用好"。</p>
-            </div>
-
-            <h3>1. 艾瑞咨询2026报告：57.3%家长辅导孩子时使用GenAI</h3>
-            <p>艾瑞咨询最新发布的《2026年中国GenAI教育应用发展报告》显示了一系列震撼数据：<span class="source-tag verified">可信度：高</span></p>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>WAIC 2026昨日闭幕，AI教育成为全场最大亮点——从清华"对话即学习"到新华社今日报道的AI课堂革命，AI正在重塑中国2.2亿中小学生的学习方式。</p></div>
+            <h3>1. WAIC 2026闭幕：AI教育产品全面爆发</h3>
+            <p>2026世界人工智能大会（WAIC 2026）于7月17-20日在上海举行，昨日刚刚闭幕。1100+企业参展，AI教育成为最受关注的主题之一。<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li>截至2025年12月，中国生成式AI用户达<strong>6.02亿人</strong>，普及率42.8%，较2024年底增长141.7%</li>
-                <li><strong>57.3%的家长</strong>在辅导孩子时使用GenAI类应用</li>
-                <li>25%成年学习者利用GenAI进行备考或学习</li>
-                <li>孩子接触GenAI的首要途径是<strong>通用AI助手（74.8%）</strong></li>
-                <li>报告指出：AI的真正价值在于"将教师从40%的繁琐中解放，使其投入60%不可替代的教育劳动"</li>
+                <li><strong>科大讯飞AI学习机T90：</strong>全新升级18项功能，覆盖查缺补漏、答疑辅导、英语提升、素养拓展，搭载13.8英寸护眼屏，支持家长实时管控</li>
+                <li><strong>合合信息"蜜蜂AI"：</strong>蜜蜂智阅一体机可在课间10分钟完成全年级作业批改；"AI拍题实验室"将物理/数学题转化为可交互动画</li>
+                <li><strong>爱学AI学习实验室：</strong>多场景AI学习智能体——费曼学习法、剧情闯关学AI知识、孔子数字人交流</li>
+                <li><strong>清华校长李路明在WAIC提问：</strong>"当知识唾手可得，大学的不可替代性体现在什么地方？"——引发教育界深度反思</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：艾瑞咨询 iResearch，2026年2月发布（数据截至2025年12月）</p>
-
-            <h3>2. 全球AI教育服务平台落地：中国智慧教育再升级</h3>
-            <p>2026世界数字教育大会（5月11-13日，杭州）后，中国智慧教育公共服务平台正式推出<strong>全球AI教育服务平台</strong>三大核心功能：<span class="source-tag gov">官方平台</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：人民日报/21财经、36氪、科技日报，2026年7月17-20日</p>
+            <h3>2. 新华社今日报道：中国AI课堂革命深入扎根</h3>
+            <p>新华社今日（7月21日）发表英文长篇报道《China\'s AI classroom revolution takes root》：<span class="source-tag gov">官方媒体</span></p>
             <ul>
-                <li><strong>全球AI教育服务平台：</strong>面向各国学习者提供中国优质数字资源和数字教育产品</li>
-                <li><strong>终身学习中心：</strong>支持"人人皆学、处处能学、时时可学"的学习型社会</li>
-                <li><strong>中文学习社区：</strong>全球中文学习者的AI辅助学习空间</li>
-                <li>大会还发布了《全球数字教育发展指数（2026年）》，参评国家从72个扩展至82个</li>
+                <li>北京十三中：AI"智能体"分析学生数周数据，<strong>几分钟内生成个性化习题和课后作业</strong></li>
+                <li>北京三十五中：编程课AI初评替代教师逐行检查代码，<strong>教师时间转向教学设计和个性化辅导</strong></li>
+                <li>温州：AI素养课让学生用生成式AI制作<strong>方言数字人</strong>介绍本地文化</li>
+                <li>"十五五"规划明确提出<strong>利用AI改变教育模式</strong>，融入教育每一个环节</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：21世纪经济报道，2026年5月7日</p>
-
-            <h3>3. 教育部五部门"AI+教育"行动计划：中小学全面普及AI课程</h3>
-            <p>教育部等五部门于4月2日发布《"人工智能+教育"行动计划》（教科信〔2026〕1号），明确：<span class="source-tag gov">官方文件</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：新华社 Xinhua english.news.cn，2026年7月21日</p>
+            <h3>3. Anthropic开源K12教师技能——示范"生产级Skill怎么写"</h3>
+            <p>Anthropic于7月20日在GitHub开源<strong>k12-teacher-skills</strong>仓库，将Claude for Teachers中的两个官方Agent Skill源码完整公开。<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li>中小学<strong>开齐开足AI相关课程</strong>，纳入地方课程体系</li>
-                <li>AI成为高校公共基础课，全体大学生必修</li>
-                <li>制定教师智能素养标准，<strong>AI纳入教师资格考试</strong></li>
-                <li>建设"未来课堂""未来学校""未来学习中心"</li>
-                <li>研发智能学伴、试点数字教材、推出新一代智慧慕课</li>
-                <li>目标：到2030年AI与教育深度融合格局基本形成，<strong>全球影响力进入前列</strong></li>
+                <li><strong>k12-lesson-planning：</strong>一句话生成完整教案，交付3份Word文档（教案+学生材料+观察模板）</li>
+                <li><strong>k12-lesson-differentiation：</strong>将课程改编为三个层次版本，交付4份Word文档</li>
+                <li>核心设计：JSON内容源与Word渲染分离——修改一处同步所有文档</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：教育部官网 moe.gov.cn，2026年4月2日</p>
-
-            <h3>4. "启悟学习社区"：国产AI开源生态赋能教育</h3>
-            <p>在2026世界数字教育大会上亮相的"启悟学习社区"，聚焦国产AI开源生态，多家AI领军企业提供课程、算力和项目支持，学生在承担开源攻关任务中提升实战能力。同时举办了首届全球青少年AI研习营，来自23个国家的27支队伍参与3D建模、大模型编程、无人机飞行控制等项目。<span class="source-tag verified">可信度：高</span></p>
-            <p style="font-size:13px;color:var(--text-light);">来源：21世纪经济报道、教育部，2026年5月</p>
-
-            <div class="action-card">
-                <h4>🐑 黄羊建议</h4>
-                <p>57%的家长已经在用AI辅导孩子——你还不用，可能就落后了。但关键是<strong>怎么用</strong>：不是让孩子直接抄AI答案，而是利用AI来启发思考、拓展视野。建议从这个暑假开始，和孩子一起探索一两个优质的AI学习工具，把"用AI学"变成一种家庭习惯。</p>
-            </div>
+            <p style="font-size:13px;color:var(--text-light);">来源：AI星球 aixq.cc，2026年7月20日</p>
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>AI教育正在从"辅助工具"升级为"教学基础设施"。家长可以关注两件事：一是让孩子<strong>学会向AI提问</strong>（而非让AI代劳），二是了解孩子的AI素养水平——这将是未来竞争力的关键指标。</p></div>
         </div>
-
-        <!-- ===== DSE 动态 ===== -->
         <div class="section">
             <h2><span class="emoji">📚</span>DSE / 教育政策动态</h2>
-
-            <div class="daily-summary">
-                <h3>📌 一句话总结</h3>
-                <p>DSE放榜一周，改选与覆核均已截止，接下来关键节点：8月5日JUPAS正式遴选结果公布。</p>
-            </div>
-
-            <h3>1. DSE 2026 放榜后关键时间轴（持续更新）</h3>
-            <p>2026年DSE已于7月15日放榜，以下是放榜后的全部关键日期：<span class="source-tag verified">可信度：高</span></p>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>DSE放榜已近一周，24位状元创历史新高。明日（7月22日）是暨大华大招生截止日，8月5日JUPAS正式遴选结果公布。</p></div>
+            <h3>1. DSE 2026放榜回顾：24状元创历史新高</h3>
+            <p>2026年DSE于7月15日放榜，诞生<strong>24位状元</strong>（14男10女），历届最多，其中11人属"超级状元"。15,973名日校考生达"332A33"大学门槛，占36.8%，<strong>约1.2人竞争一个学位</strong>。<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li><strong>✅ 7月15日：</strong>DSE放榜 — 已有结果</li>
-                <li><strong>✅ 7月16-18日：</strong>JUPAS免费改选 — <strong>已截止</strong></li>
-                <li><strong>✅ 7月20日：</strong>DSE成绩覆核(Appeal)申请截止 — <strong>昨天截止</strong></li>
-                <li><strong>⏳ 8月5日：</strong>JUPAS正式遴选结果公布 — <strong>还有15天</strong></li>
-                <li><strong>⏳ 8月12日：</strong>考評局公布DSE成绩覆核结果</li>
-                <li><strong>⏳ 8月13日：</strong>覆核后JUPAS改选（仅限已申请覆核考生）</li>
-                <li><strong>⏳ 8月25日：</strong>JUPAS补选结果公布</li>
+                <li><strong>香港华仁书院郑子絃：</strong>患先天性眼疾，视力不足一成，考获7科5**及A</li>
+                <li><strong>沙田崇真郑一力：</strong>中一成绩下游逆袭成状元，立志读医</li>
+                <li><strong>保良局董玉娣李心儿：</strong>中三起不补习，现于哈佛修读暑期课程</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：JUPAS官网、学友社 student.hk、YOHO，2026年7月</p>
-
-            <h3>2. 暨大华大DSE招生今天截止！</h3>
-            <p><strong>⚠️ 紧急提醒：</strong>暨南大学、华侨大学针对2026年DSE考生的独立招生将于<strong>7月22日截止</strong>（明天！）。申请资格要求DSE五科达到一定分数标准，有意向走内地升学路线的考生务必今天提交申请。<span class="source-tag verified">可信度：高</span></p>
-            <p style="font-size:13px;color:var(--text-light);">来源：星岛头条，2026年7月16日</p>
-
-            <h3>3. 教育部出台"十条措施"护航青少年心理健康</h3>
-            <p>教育部印发《进一步加强中小学生心理健康工作十条措施》（2025年11月），核心内容：<span class="source-tag gov">官方文件</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：考評局 HKEAA、星岛头条、香港01，2026年7月14-15日</p>
+            <h3>2. ⚠️ 明日（7月22日）截止：暨大华大招收DSE学生</h3>
+            <p>暨南大学、华侨大学针对DSE考生的<strong>招生将于明日截止</strong>。有意内地升学的家庭请抓紧今日准备材料！<span class="source-tag gov">官方信息</span></p>
+            <h3>3. 放榜后关键日期</h3>
             <ul>
-                <li>每校至少配备1名专（兼）职心理健康教育教师</li>
-                <li>心理健康知识纳入教师培训</li>
-                <li>完善心理健康测评与分类干预</li>
-                <li><strong>12356（全国心理援助热线）、12355（青少年服务热线）</strong></li>
+                <li><strong>📌 明日（7/22）：</strong>暨大华大DSE招生截止</li>
+                <li><strong>🎓 8月5日：</strong>JUPAS正式遴选结果公布</li>
+                <li><strong>📋 8月12日：</strong>成绩覆核结果公布 → <strong>8月13日：</strong>覆核后改选</li>
+                <li><strong>📬 8月25日：</strong>JUPAS补选结果公布</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：教育部官网 moe.gov.cn，2025年11月</p>
-
-            <h3>4. 暑期高校学生资助热线已开通</h3>
-            <p>教育部2026年暑期高校学生资助热线电话已于<strong>7月1日开通</strong>，为大学新生（特别是家庭经济困难学生）提供资助政策咨询与帮助。各省和中央部属高校同步开通热线。有需要的家庭可以拨打咨询。<span class="source-tag gov">官方信息</span></p>
-            <p style="font-size:13px;color:var(--text-light);">来源：新华网 education.news.cn，2026年7月2日</p>
-
-            <div class="action-card">
-                <h4>🐑 黄羊建议</h4>
-                <p>DSE放榜已过去近一周，现在进入"等待期"——考生和家长可以稍微喘口气。接下来最重要的事：<strong>准备好8月5日查看JUPAS遴选结果</strong>。如果打算走内地升学路线，暨大华大的明天（7月22日）截止，今天还有最后机会！</p>
-            </div>
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>家有DSE考生且考虑内地升学的，<strong>明天是暨大华大招生最后一天</strong>！等待8月5日JUPAS结果的考生，可利用这段时间深入了解志愿学校课程设置和就业前景。</p></div>
         </div>
-
-        <!-- ===== 健康知识 ===== -->
         <div class="section">
             <h2><span class="emoji">💪</span>青少年健康知识</h2>
-
-            <div class="daily-summary">
-                <h3>📌 一句话总结</h3>
-                <p>最新数据：高中生抑郁检出率达40%——守护孩子心理健康已不只是家庭责任，而是全社会必须面对的系统工程。</p>
-            </div>
-
-            <h3>1. 触动心弦的数据：青少年心理健康现状</h3>
-            <p>《2025中国精神心理健康蓝皮书》公布的数据令人担忧：<span class="source-tag verified">可信度：中</span></p>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>上海交大最新研究：睡足+控屏对心理健康的保护效果优于单独运动；仅2.7%青少年做到了"睡够+运动+控屏"三达标。</p></div>
+            <h3>1. 上海交大重磅研究：心理健康"三件套"</h3>
+            <p>上海交大医学院团队基于<strong>15,000余名上海中学生</strong>调研，在精神科权威期刊发表研究：<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li>高中生抑郁检出率：<strong>40%</strong></li>
-                <li>初中生抑郁检出率：<strong>30%</strong></li>
-                <li>小学生抑郁检出率：<strong>10%</strong></li>
-                <li>14-18岁青少年心理障碍检出率：<strong>24.6%</strong>（其中重度抑郁7.4%）</li>
+                <li><strong>屏幕时间+睡眠双达标</strong>对抑郁的防护效果，显著优于单独运动达标</li>
+                <li>三项均达标可<strong>降低抑郁风险55%、焦虑风险79%</strong></li>
+                <li>但现实残酷：<strong>仅2.7%青少年全部达标</strong>，约40%一项都不达标</li>
+                <li>仅约15%学生达到推荐睡眠时长（13-16岁建议8-10小时）</li>
+                <li>抑郁、焦虑、孤独感检出率：<strong>18.8%、38.5%、53.7%</strong></li>
             </ul>
-            <p>2026年全国两会期间，多位代表委员聚焦青少年心理健康。政府工作报告明确提出"加强心理健康教育，健全学校家庭社会协同育人机制"。守护孩子的心理健康，已经从家庭责任升级为<strong>国家系统工程</strong>。</p>
-            <p style="font-size:13px;color:var(--text-light);">来源：博客园/中国精神心理健康蓝皮书，2026年</p>
-
-            <h3>2. 暑期青少年心理健康特别提醒</h3>
-            <p>暑假是青少年心理问题的"隐形高发期"——离开了学校的社交环境，长时间独处或沉溺网络，容易引发情绪问题。家长请留意以下信号：<span class="source-tag verified">可信度：中</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：上海交大 news.sjtu.edu.cn，Journal of Affective Disorders，2026年3月</p>
+            <h3>2. 《柳叶刀》：中国大规模校园心理健康干预有效</h3>
+            <p>覆盖<strong>中国10省、18所中学、5,222名学生</strong>的随机对照试验，在《柳叶刀-儿童青少年健康》发表：<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li><strong>情绪持续低落：</strong>超过两周的情绪抑郁、易怒或情感麻木</li>
-                <li><strong>行为显著退缩：</strong>社交回避、沉迷虚拟世界逃避现实</li>
-                <li><strong>作息紊乱：</strong>严重失眠或嗜睡、日夜颠倒</li>
-                <li><strong>食欲剧变：</strong>突然暴食或厌食</li>
-                <li>⚠️ 如发现以上多个信号叠加，请及时联系学校心理老师或拨打12355</li>
+                <li>10周心理健康课程后，3个月随访时<strong>抑郁和焦虑症状显著改善</strong></li>
+                <li>同时提升自我关怀、心理韧性、认知灵活性、亲社会行为</li>
+                <li>证明：<strong>低成本、融入常规课程的干预模式</strong>在校园推广心理健康是可行的</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：综合整理，2026年7月</p>
-
-            <h3>3. 暑期安全教育要点</h3>
-            <p>各地学校发布的《2026年暑假安全教育告家长书》强调了以下暑期安全重点：<span class="source-tag verified">可信度：中</span></p>
-            <ul>
-                <li><strong>极端天气防范：</strong>暑期是暴雨、雷电、台风高发期，避免恶劣天气外出</li>
-                <li><strong>防溺水：</strong>不在无安全设施水域游泳，家长务必掌握孩子去向</li>
-                <li><strong>交通安全：</strong>未满16周岁禁止骑电动自行车上路</li>
-                <li><strong>网络安全：</strong>控制上网时间，防范网络诈骗和不良信息</li>
-                <li><strong>心理健康：</strong>持续关注孩子情绪，培养积极心理品质，建立"自助、互助、求助"意识</li>
-            </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：甘肃省华池县列宁学校等，2026年7月</p>
-
-            <h3>4. "五健"计划持续推进：江西等省份率先落地</h3>
-            <p>国家13部门"五健"促进行动计划发布后，各省份加速落地。江西省率先印发《儿童青少年心理健康促进行动方案（2025-2027年）》，建设省市级儿童青少年心理中心，推动二级以上精神专科医院全部开设心理门诊。教育部还推动学校设立"校园健康角"，配备体重秤、视力表等健康工具。<span class="source-tag gov">官方信息</span></p>
-            <p style="font-size:13px;color:var(--text-light);">来源：教育部官网、博客园，2026年</p>
-
-            <div class="action-card">
-                <h4>🐑 黄羊建议</h4>
-                <p>看到40%的高中生抑郁检出率，每个家长都应该认真对待。这个暑假，比起报补习班，不如每天给孩子<strong>15分钟高质量的倾听</strong>——不评判、不说教、不比较。有时候孩子的"叛逆"只是渴望被看见和理解的信号。如果发现不对劲，别讳疾忌医，12355热线随时可以拨打。</p>
-            </div>
+            <p style="font-size:13px;color:var(--text-light);">来源：The Lancet Child & Adolescent Health，2026年4月</p>
+            <h3>3. 无锡2.3万学生睡眠调查</h3>
+            <p>Scientific Reports 7月9日发表：无锡<strong>23,167名6-17岁学生</strong>调查发现，睡眠不足与<strong>屏幕时间过长、体育活动不足、学业压力</strong>显著相关。初高中学生是睡眠不足重灾区。<span class="source-tag verified">可信度：高</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：Scientific Reports nature.com，2026年7月9日</p>
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>暑假是改善健康习惯的黄金窗口。① <strong>控屏优先：</strong>娱乐屏幕≤2小时/天，睡前一小时无屏幕；② <strong>保障睡眠：</strong>13-16岁保证8-10小时；③ <strong>鼓励运动：</strong>每天≥60分钟中高强度运动，女生尤其推荐团队运动。<strong>记住：三项达标=抑郁风险↓55%、焦虑风险↓79%。</strong></p></div>
         </div>
-
-        <!-- ===== 推荐资源 ===== -->
         <div class="section">
             <h2><span class="emoji">📖</span>推荐资源</h2>
             <ul>
-                <li><strong>AI学习工具：</strong>国家智慧教育公共服务平台（smartedu.cn）— 全球AI教育服务平台入口</li>
-                <li><strong>DSE升学：</strong>JUPAS官网（jupas.edu.hk）— 8月5日查询遴选结果</li>
-                <li><strong>内地升学：</strong>暨大华大DSE招生（7月22日截止）— 详见星岛头条或院校官网</li>
-                <li><strong>资助咨询：</strong>教育部高校学生资助热线（7月1日-9月）— 详见 education.news.cn</li>
-                <li><strong>心理援助：</strong>12356（全国心理援助）、12355（青少年服务）</li>
-                <li><strong>暑期安全：</strong>各地学校《暑假安全教育告家长书》</li>
+                <li><strong>AI学习工具：</strong>AI Cosmos（aicosmos.ai）— 清华CoAI团队出品，免费，"对话即学习"</li>
+                <li><strong>DSE升学：</strong>教育局中六学生资讯专页 edb.gov.hk/s6 + e导航升学工具</li>
+                <li><strong>内地升学：</strong>暨大华大DSE招生 — 7月22日截止，今日务必准备材料</li>
+                <li><strong>心理援助：</strong>12356（全国心理援助热线）、12355（青少年服务热线）</li>
             </ul>
         </div>
-
-        <!-- ===== 注意事项 ===== -->
         <div class="section">
             <h2><span class="emoji">⚠️</span>注意事项</h2>
             <ul>
-                <li><strong>暨大华大明天截止：</strong>有意向走内地升学的DSE考生，暨南大学、华侨大学独立招生<strong>7月22日（明天）截止</strong>，请务必今天提交申请。</li>
-                <li><strong>JUPAS等候期：</strong>从现在到8月5日JUPAS放榜期间是等待期，建议考生利用这段时间了解备选方案（自资学士、副学士、高级文凭等）。</li>
-                <li><strong>AI产品选择：</strong>47.8%家长使用AI辅导孩子，但市面上AI教育产品质量参差不齐。建议优先选择有教育机构背书的产品，避免让孩子接触未过滤的通用AI对话。</li>
-                <li><strong>心理健康数据来源：</strong>心理健康检出率数据来自《2025中国精神心理健康蓝皮书》，具体最新数据请以官方发布为准。</li>
+                <li><strong>明天（7/22）暨大华大招生截止：</strong>今天是准备材料的最后一天！</li>
+                <li><strong>AI教育工具泛滥：</strong>优先选择有教育机构背书的工具，避免让孩子使用未经安全过滤的通用AI对话</li>
+                <li><strong>心理健康数据仅供参考：</strong>检出率数据来自学术研究样本，如孩子持续两周以上情绪低落、社交退缩，请及时寻求专业帮助</li>
+                <li><strong>信息时效：</strong>部分研究论文发表于数月前，但在7月经媒体广泛报道后重新引起关注，均为最新可获取的权威来源</li>
             </ul>
         </div>
     </div>
-
-    <!-- ========== KID VIEW ========== -->
     <div id="kidTab" class="tab-content">
-
         <div class="kid-view">
-            <div class="kid-emoji-big">📱🧠</div>
-
+            <div class="kid-emoji-big">🦾😴📱</div>
             <div class="kid-card">
-                <h2>🤔 你知道吗？超过一半的爸爸妈妈，正在用AI辅导孩子学习！</h2>
-                <p>有个新出炉的报告说——全中国已经有<strong>超过一半的家长</strong>（57.3%），在辅导孩子功课的时候会用AI帮忙！</p>
-
-                <div class="kid-highlight">
-                    📊 每10个家长中就有差不多6个，在遇到"这道题怎么讲"的时候，会问AI！
-                </div>
-
-                <p>而且你可能已经用过AI了——比如问手机里的语音助手问题、用AI画画、让AI帮你改作文……只是你没意识到那是"AI"而已。</p>
-
-                <p>不过呢，聪明地使用AI和"偷懒"用AI可是两回事：</p>
-                <ul style="padding-left:20px;">
-                    <li>❌ 把作业题丢给AI，直接抄答案 → 这是在骗自己</li>
-                    <li>✅ 把AI当成"会说话的参考书"，问它"这个我不懂，能换种方式再讲一遍吗？" → 这才是高手</li>
-                </ul>
-
-                <div class="kid-tip">
-                    <strong>💡 给你的超级技能：</strong><br>
-                    学会向AI提出<strong>好的问题</strong>，比学会一个知识点更重要。因为未来，提问的能力就是你最强的超能力！
-                </div>
+                <h2>🧪 清华哥哥姐姐做了个超酷的学习玩具</h2>
+                <p>你有没有遇到过：物理题里的"凸透镜成像"、数学题里的"函数图像"——老师在黑板画了半天，你还是半懂不懂？</p>
+                <p>清华大学的哥哥姐姐们做了一个叫<strong>AI Cosmos</strong>的东西（免费的！）。它不是给你看一个视频就完了——</p>
+                <div class="kid-highlight">🎮 你可以<strong>自己动手拖动蜡烛、调节距离</strong>，亲眼看到像怎么变大变小、怎么倒过来！</div>
+                <p>前几天在上海的世界人工智能大会上，还展示了更酷的：拍一道不会做的物理题，AI不是直接给答案，而是把它变成一段<strong>可以玩的动画</strong>——你可以自己调摩擦力、改速度，看看会发生什么变化！</p>
+                <div class="kid-tip"><strong>💡 给聪明的你：</strong><br>以后遇到听不懂的知识点，试试用AI工具让它"用不一样的方式再讲一遍"。<strong>学会找到最适合自己的学习方法</strong>，比死记硬背厉害一百倍！</div>
             </div>
-
             <div class="kid-card">
-                <h2>☀️ 暑假快乐提醒：照顾好你的"心情小怪兽"</h2>
-                <p>暑假不上学了，按理说应该很开心对不对？但有时候——<strong>一个人待久了、手机刷多了、作息全乱了</strong>——反而会感觉莫名的烦躁和低落。</p>
-
-                <div class="kid-highlight">
-                    🎯 给你的暑假心情急救包：
-                </div>
-
-                <p>🌳 <strong>每天出一次门：</strong>哪怕只是下楼倒个垃圾、骑一圈单车。你的大脑需要阳光和新鲜空气！</p>
-                <p>👥 <strong>找真人聊天：</strong>不是发微信，是真的面对面和朋友玩。你的大脑分得清"真人互动"和"屏幕互动"——它更喜欢真人！</p>
-                <p>😴 <strong>别熬夜到凌晨：</strong>连续几天半夜3点睡、中午12点起，你的情绪会像过山车。试着在12点前睡觉！</p>
-                <p>🗣️ <strong>不开心要说出来：</strong>如果觉得闷、烦、焦虑——告诉爸妈、老师或者好朋友。还有一个24小时热线<strong>12355</strong>，随时可以打过去找人聊天。</p>
+                <h2>💤 暑假过半，你的"身体电池"充够电了吗？</h2>
+                <p>上海交大的科学家追踪了<strong>15000个中学生</strong>，发现一件很神奇的事——</p>
+                <div class="kid-highlight">😴 睡够 + 📵 少看屏幕 = 比单独运动更能让心情变好！<br>三个都做到的人，<strong>不开心的情况减少55%，焦虑减少79%！</strong></div>
+                <p>但是——<strong>只有2.7%的人做到了全部三件事</strong>！100个人里不到3个人在暑假"睡够了、玩够了、看屏幕不过量" 🤯</p>
+                <p>科学家说的"达标"其实不难：🌙 睡8-10小时 · 🏃 每天动1小时 · 📱 娱乐屏幕不超过2小时</p>
+                <p>暑假已经过半啦！剩下一个月，要不要挑战"三件套全达标"？🦾</p>
+                <div class="kid-tip"><strong>💡 小技巧：</strong><br>睡前一小时把手机放在客厅充电（不带上床！），早上用真闹钟而不是手机叫醒——这两个小改变就能同时帮到睡眠和控屏！</div>
             </div>
-
-            <div class="kid-tip">
-                <strong>💬 和爸爸妈妈聊聊：</strong><br>
-                你有没有用过AI学习？你觉得AI能帮你做什么、不能帮你做什么？和爸妈一起聊聊这个话题——说不定他们也在偷偷用AI呢 😄
-            </div>
+            <div class="kid-tip"><strong>💬 和爸爸妈妈聊聊：</strong><br>你觉得现在的屏幕时间多吗？如果让你设计一个"暑假健康计划"，你会怎么安排每天的睡觉、运动和屏幕时间？和爸妈一起制定全家参与的计划吧！</div>
         </div>
     </div>
-
     <footer>
         <p>🐑 黄羊成长记 · 由 AI 研究助理生成</p>
         <p>内容基于多源公开信息整理，标注可信度，仅供参考</p>
         <p><a href="../">查看全部话题 →</a></p>
     </footer>
 </div>
-
 <script>
 function switchTab(tab) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','kid-active'));
