@@ -32,7 +32,7 @@
         .source-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
         .source-tag.verified { background: #e8f5e9; color: #2e7d32; }
         .source-tag.gov { background: #e3f2fd; color: #1565c0; }
-        .source-tag.new { background: #fce4ec; color: #c62828; }
+        .source-tag.medium { background: #fff3e0; color: #e65100; }
         .action-card { background: linear-gradient(135deg, #fdf0eb 0%, #fff5f0 100%); border: 1px solid #f5d5c8; border-radius: var(--radius); padding: 18px 20px; margin-top: 14px; }
         .action-card h4 { color: var(--accent); margin-bottom: 6px; }
         .daily-summary { background: linear-gradient(135deg, #fff9e6 0%, #fff5e6 100%); border: 1px solid #f0d88a; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 8px; }
@@ -60,181 +60,154 @@
         <button class="tab-btn active" onclick="switchTab('mom')">👩 家长指南</button>
         <button class="tab-btn" onclick="switchTab('kid')">👧 给孩子看</button>
     </div>
-
-    <!-- ========== MOM VIEW ========== -->
     <div id="momTab" class="tab-content active">
         <div class="mom-header">
-            <div class="date">2026年07月23日 星期四</div>
+            <div class="date">2026年07月23日 星期三</div>
             <h1>☀️ 黄羊早报 | 2026年07月23日</h1>
-            <div class="original-q"><strong>📰 今日聚焦：</strong>WAIC 2026余波未平——教育AGI白皮书首发、清华"人机共育"论坛深度解读；DSE放榜一周后关键节点提醒；国家体育总局发布暑期青少年科学运动指南——黄羊为您精选最新育儿资讯。</div>
+            <div class="original-q"><strong>📰 今日聚焦：</strong>JUPAS改选窗口已关闭，DSE考生进入"等待期"；教育部五部门联合发布「人工智能+教育」行动计划落地推进；暑期过半，新华网发布中小学生健康五大提示——黄羊为您精选今日育儿资讯。</div>
         </div>
-
-        <!-- ===== AI 教育 ===== -->
         <div class="section">
             <h2><span class="emoji">🤖</span>AI 教育新进展</h2>
-            <div class="daily-summary"><h3>📌 一句话总结</h3><p>WAIC余波持续发酵——教育AGI白皮书首发试图破解"个性化+高质量+大规模"不可能三角，新华网、清华深度解读AI如何重塑大学课堂。</p></div>
-
-            <h3>1. WAIC后分析：AI教育进入"多元场景+软硬融合+生态升级"新阶段</h3>
-            <p>36氪在WAIC闭幕后发布深度分析，指出AI教育已从单一产品展示走向<strong>多元场景融合</strong>的新阶段。<span class="source-tag verified">可信度：高</span></p>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>教育部等五部门联合印发《"人工智能+教育"行动计划》，从国家层面系统部署AI融入教育；新加坡同步发布教师AI素养蓝图，亚洲AI教育竞赛全面展开。</p></div>
+            <h3>1. 教育部等五部门印发《"人工智能+教育"行动计划》<span class="source-tag gov">官方政策</span></h3>
+            <p>教育部、国家发展改革委、工信部、科技部、国家数据局五部门联合印发《"人工智能+教育"行动计划》，这是中国首个国家级AI教育系统性政策文件。<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li><strong>多元场景：</strong>从备课→授课→作业→学情分析→家校沟通，AI覆盖教学全链条</li>
-                <li><strong>软硬融合：</strong>科大讯飞T90学习机、蜜蜂智阅一体机等，AI能力嵌入专用硬件</li>
-                <li><strong>生态升级：</strong>Anthropic开源K12技能、国内企业发布教学智能体平台——从封闭产品走向开放生态</li>
+                <li><strong>核心目标：</strong>到2027年基本建成"人工智能+教育"应用体系；到2030年形成AI赋能教育新生态</li>
+                <li><strong>四大行动：</strong>AI赋能教学提质、AI赋能学习提质、AI赋能管理增效、AI赋能教师发展</li>
+                <li><strong>K12重点：</strong>推进中小学AI教育课程建设，AI素养纳入综合素质评价；建设一批AI教育实验区和实验校</li>
+                <li><strong>教师培训：</strong>AI应用能力纳入教师继续教育必修，2027年前完成全国中小学教师AI应用轮训</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：36氪，2026年7月22日</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：教育部官网 moe.gov.cn，2026年4月发布，近期全面推进落地</p>
 
-            <h3>2. <span class="source-tag new">今日新发布</span> 天立启鸣发布教育AGI白皮书：破解教育"不可能三角"</h3>
-            <p>7月22日，天立启鸣在WAIC期间发布<strong>《世界模型驱动的教育AGI白皮书》</strong>，提出用AGI破解教育领域的经典难题——"不可能三角"：<strong>个性化教学、高质量内容、大规模普及</strong>三者难以兼得。<span class="source-tag verified">可信度：中</span></p>
+            <h3>2. 10款最佳AI教育工具——2026年7月最新评测 <span class="source-tag verified">可信度：中高</span></h3>
+            <p>科技媒体Unite.AI于7月发布最新AI教育工具综合评测，覆盖K-5到研究生的全年龄段需求：</p>
             <ul>
-                <li>传统教育只能在三者中取其二：一对一私教（个性化+高质量但无法大规模）、名校课堂（高质量+大规模但难以个性化）、在线录播课（大规模但缺个性化+质量参差）</li>
-                <li>白皮书提出：世界模型驱动的AGI可同时实现<strong>千人千面的学习路径+专家级教学内容+低成本大规模部署</strong></li>
-                <li>已在部分K12学校开展试点，覆盖数学、物理等学科的自适应学习</li>
+                <li><strong>🏆 Khanmigo（可汗学院）：</strong>GPT-4驱动，苏格拉底式辅导，不直接给答案而是引导学生思考（免费+$4/月）</li>
+                <li><strong>🏆 Edcafe AI：</strong>AI课程计划、测验、闪存卡、幻灯片一键生成（免费+$7.99/月）</li>
+                <li><strong>🏆 MagicSchool AI：</strong>80+教师工具，课程计划、IEP编写，FERPA合规（免费+$8.33/月）</li>
+                <li><strong>🏆 Synthesis Tutor：</strong>5-11岁儿童数学，自适应学习，视觉化解释（$99/年）</li>
+                <li><strong>🏆 Quizlet Q-Chat：</strong>AI辅导+闪存卡+练习测试，Magic Notes自动生成学习材料（免费+$7.99/月）</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：量子位 qbitai.com、投资界 pedaily.cn，2026年7月22日</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：Unite.AI unite.ai，2026年7月</p>
 
-            <h3>3. 新华网+清华：AI正重塑大学课堂，"人机共育"成为共识</h3>
-            <p>新华网7月21日发表报道，清华大学"人机共育·重塑大学"AI+教育论坛在WAIC期间举行，多位院士校长达成共识：<span class="source-tag gov">官方媒体</span></p>
-            <ul>
-                <li><strong>清华校长李路明：</strong>清华学堂在线平台已有1.67亿学习者、1.2万门慕课，与全国高校共建<strong>7.8万门AI赋能课程、149个学科知识引擎</strong></li>
-                <li><strong>华东师大校长马余刚：</strong>未来好老师必须兼具"经师、人师、机师"三重身份</li>
-                <li><strong>上海徐汇区教育局局长周刚：</strong>AI时代青少年核心竞争力从"掌握知识的速度"转向<strong>"定义问题的深度"</strong>，从"记忆答案的准确性"转向<strong>"提出问题的原创性"</strong></li>
-                <li><strong>包玉刚实验学校：</strong>当AI可以超过人类时，更重要的问题变成——<strong>谁值得被信任并能承担责任？</strong>品格教育比知识传授更重要</li>
-            </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：新华网 news.cn（7/21）、清华大学 tsinghua.edu.cn、人民日报/21财经（7/20）</p>
+            <h3>3. 新加坡推出教师AI素养蓝图，亚洲AI教育竞争加速</h3>
+            <p>新加坡教育部近日发布教师AI素养蓝图，要求全国教师系统学习AI基础、数据素养、AI伦理与课堂应用四大模块，2027年前完成全员培训。<span class="source-tag verified">可信度：高</span></p>
+            <p>此举与中国的"人工智能+教育"行动计划形成呼应——<strong>AI素养正在成为亚洲教育体系的核心竞争力指标。</strong></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：华人头条、新加坡教育部，2026年7月22日</p>
 
-            <div class="action-card"><h4>🐑 黄羊建议</h4><p>WAIC传递的最重要信号：<strong>AI教育的竞赛已经从"谁会做题"转向"谁会提问"</strong>。作为家长，与其纠结让不让孩子用AI，不如引导孩子学会<strong>定义问题、拆解问题、验证答案</strong>——这些能力在AI时代比记忆任何知识点都重要。徐汇区教育局长的比喻很精辟：<strong>"让AI成为你的杠杆，而不是你的拐杖。"</strong></p></div>
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>教育部已将AI素养上升到国家战略层面，未来几年AI能力将成为和英语、编程同等重要的基础素养。家长可以：① 让孩子<strong>尝试1-2款安全AI学习工具</strong>（推荐Khanmigo，支持中文），体验"AI辅导员"；② <strong>自己先了解AI</strong>——教师都在全员培训了，家长不跟进就没法和孩子对话了。</p></div>
         </div>
-
-        <!-- ===== DSE 动态 ===== -->
         <div class="section">
             <h2><span class="emoji">📚</span>DSE / 教育政策动态</h2>
-            <div class="daily-summary"><h3>📌 一句话总结</h3><p>DSE放榜已过一周（7/15放榜），JUPAS免费改选（7/16-18）和成绩覆核申请（7/20）均已截止。当前进入JUPAS等待期——下个关键节点是8月5日JUPAS正式遴选结果公布。</p></div>
-
-            <h3>1. 放榜一周后：当前所处阶段</h3>
-            <p>DSE 2026已于7月15日放榜，距今已一周多。目前所有免费改选和覆核申请均已截止，考生进入<strong>JUPAS等待期</strong>。<span class="source-tag verified">可信度：高</span></p>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>JUPAS改选（7/16-18）和成绩覆核申请（7/20截止）均已结束，全港约1.6万考生进入等待期——下一个关键节点：8月5日JUPAS正式遴选结果公布。</p></div>
+            <h3>1. JUPAS改选截止，考生进入等待期</h3>
+            <p>JUPAS课程改选的48小时个人时段已于7月18日结束，成绩覆核申请也于7月20日截止。目前约15,973名达"332A33"门槛的日校考生已提交最终志愿，等待8月5日揭晓结果。<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li><strong>✅ 已完成：</strong>JUPAS免费改选（7/16-18截止）、成绩覆核Appeal申请（7/20截止）、暨大华大招生（7/22截止）</li>
-                <li><strong>⏳ 等待中：</strong>JUPAS正式遴选结果 → <strong>8月5日公布</strong></li>
-                <li><strong>📋 后续：</strong>成绩覆核结果（8/12）→ 覆核后改选（8/13）→ JUPAS补选（8/25）</li>
+                <li>今年约<strong>1.06人争一个八大学位</strong>（约1.5万学位 vs 1.6万达标考生）</li>
+                <li>JUPAS改选策略核心：以过往收生分数+自身兴趣+就业前景三维度排布20个志愿</li>
+                <li>部分院校仅邀请Band A申请人面试，志愿排序至关重要</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：考評局 HKEAA、JUPAS官网，2026年7月</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：JUPAS官网 jupas.edu.hk、香港01、星岛头条，2026年7月</p>
 
-            <h3>2. 放榜后多元出路大盘点</h3>
-            <p>各大媒体近期密集推出"放榜后攻略"，梳理DSE考生的多元出路：<span class="source-tag verified">可信度：高</span></p>
+            <h3>2. 24状元后续：逾8成留港读医，励志故事持续发酵</h3>
+            <p>放榜一周来，24位状元（14男10女，11人超级状元）去向逐渐明朗：<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li><strong>🎓 达332A22 →</strong> 八大资助学位（JUPAS）+ 自资学士 / SSSDP指定专业</li>
-                <li><strong>📝 5科2级（含中英数）→</strong> 副学士（Asso）/ 高级文凭（HD）→ 2年后衔接大学Year 3</li>
-                <li><strong>🔧 基础一般 →</strong> 应用教育文凭（DAE）/ 职专文凭（VPC）/ 学徒培训</li>
-                <li><strong>🌏 海外升学 →</strong> 内地"免试招收港生"计划 / 台湾 / 英国 / 澳洲等</li>
-                <li><strong>💼 2026年本港专上教育机会合计逾5万个学额</strong>——每位考生都能找到适合的路径</li>
+                <li><strong>逾8成状元</strong>首选留港读医——港大和中大医学院成最大赢家</li>
+                <li><strong>香港华仁郑子絃</strong>（视障超级状元，视力不足一成）：计划入读港大政治学与法学双学位，感动全港</li>
+                <li><strong>沙田崇真郑一力</strong>（中一排名90+/逆袭状元）：善用AI工具辅助温习，立志读医回馈社会</li>
+                <li>一名状元计划赴<strong>牛津大学读计算机科学</strong>，是今年少数选择海外升学者</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：星岛头条、HK Tutor Link、LearnSmart、学友社，2026年7月</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：香港01、TVB新闻、星岛头条，2026年7月14-22日</p>
 
-            <h3>3. 2026 DSE状元回顾</h3>
-            <p>今年24位状元（14男10女）中有多位励志故事引人关注：香港华仁书院视障状元郑子絃（视力不足一成，7科5**）、沙田崇真郑一力（中一成绩下游逆袭）、保良局董玉娣李心儿（中三起不补习，现于哈佛修读暑期课程）。<span class="source-tag verified">可信度：高</span></p>
-            <p style="font-size:13px;color:var(--text-light);">来源：星岛头条、香港01、香港商报，2026年7月14-15日</p>
+            <h3>3. 📅 关键日期速查</h3>
+            <ul>
+                <li>✅ 7/15 DSE放榜 · ✅ 7/16-18 JUPAS改选 · ✅ 7/20 覆核申请截止</li>
+                <li>🔜 <strong>8/5 JUPAS正式遴选结果公布</strong> ← 下一个关键日</li>
+                <li>📋 8/12 覆核结果 → 8/13 覆核后改选 → 8/25 补选结果</li>
+            </ul>
 
-            <div class="action-card"><h4>🐑 黄羊建议</h4><p>如果家中有DSE考生，<strong>8月5日JUPAS结果公布前的这两周</strong>可以利用来：① 深入了解志愿学校的具体课程设置和毕业生出路；② 准备Plan B——如果JUPAS结果不理想，提前了解副学士、HD、自资学士等替代路径的报名流程；③ 关注各院校的<strong>即场招生日</strong>信息。教育局"中六学生资讯专页"（edb.gov.hk/s6）是一站式好帮手。</p></div>
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>等待期可做的事：① 和孩子一起<strong>深入了解志愿学校的课程和就业前景</strong>，做好两手准备；② 如果申请了覆核，关注8/12结果；③ <strong>DSE只是人生一站</strong>——今年全港有7+条升学路径（副学士、HD、SSSDP、内地升学等），条条大路通罗马。</p></div>
         </div>
-
-        <!-- ===== 健康知识 ===== -->
         <div class="section">
             <h2><span class="emoji">💪</span>青少年健康知识</h2>
-            <div class="daily-summary"><h3>📌 一句话总结</h3><p>国家体育总局发布暑期青少年科学运动指南；新研究揭示网络游戏成瘾如何破坏睡眠质量；PLOS One发表中国青少年睡眠性别与城乡差异研究——科学运动是最好的"天然安眠药"。</p></div>
-
-            <h3>1. <span class="source-tag gov">官方指南</span> 国家体育总局：科学运动助青少年睡得好</h3>
-            <p>国家体育总局近日发布暑期青少年科学运动指导，强调<strong>运动是改善青少年睡眠质量最有效、最安全的"天然良药"</strong>。<span class="source-tag gov">官方指南</span></p>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>新华网权威发布暑期健康五大提示：近视、肥胖、运动不足是暑假"三大杀手"；安徽医大新研究首次量化了"用运动替换屏幕时间"对抑郁的保护效果。</p></div>
+            <h3>1. 新华网：中小学生暑期健康五大提示 <span class="source-tag gov">官方媒体</span></h3>
+            <p>新华网近日发布中小学生暑期健康提示，针对暑假最突出的五大健康问题：<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li><strong>最佳运动时间：</strong>下午4-6点是青少年运动的"黄金窗口"——此时体温较高、肌肉柔韧性好、运动表现最佳，且运动后身体自然降温过程有助于晚间入睡</li>
-                <li><strong>避免睡前剧烈运动：</strong>睡前2小时内避免高强度运动，以免交感神经过度兴奋影响入睡</li>
-                <li><strong>暑期推荐运动：</strong>游泳（全身运动+消暑）、骑行（有氧耐力+户外阳光）、球类（社交+协调）、跳绳（便捷高效）</li>
-                <li><strong>每天目标：</strong>累计中高强度运动≥60分钟 + 户外活动≥60分钟（同时帮助近视防控）</li>
+                <li><strong>🛏️ 作息：</strong>"渐进式调整法"——每晚提早15分钟睡，达目标作息（小学生10h、初中生9h、高中生8h）</li>
+                <li><strong>🍎 饮食：</strong>零食"红绿灯"——绿灯（无糖酸奶、原味坚果）、黄灯（限量）、红灯（禁止：奶茶、辣条、膨化食品）</li>
+                <li><strong>👁️ 护眼：</strong>20-20-20法则（每20分钟看6米外20秒）+ 每天户外≥2小时</li>
+                <li><strong>🏃 运动：</strong>每天≥60分钟中高强度运动；运动不足已成多种儿童疾病"共因"</li>
+                <li><strong>❤️ 心理：</strong>每天15分钟"无评判倾听时间"，暑期是亲子冲突高发期</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：国家体育总局 sport.gov.cn，2026年7月</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：新华网 xinhuanet.com，2026年7月</p>
 
-            <h3>2. 新研究：网络游戏成瘾如何破坏青少年睡眠</h3>
-            <p>《中国临床心理学杂志》最新发表的一项纵向追踪研究发现，初中生<strong>网络游戏成瘾、学校适应困难与睡眠质量下降</strong>之间存在恶性循环：<span class="source-tag verified">可信度：高</span></p>
+            <h3>2. 新研究：用运动/睡眠替代屏幕，能降多少抑郁风险？</h3>
+            <p>安徽医科大学团队在Frontiers in Public Health发表研究，首次用"等时替代模型"量化了三者关系：<span class="source-tag verified">可信度：高</span></p>
             <ul>
-                <li>游戏成瘾 → 延迟睡眠时间 → 睡眠不足 → 第二天注意力下降 → 学业困难 → 学校适应不良 → 焦虑增加 → 更多地逃入游戏世界</li>
-                <li>打破循环的关键点：<strong>睡前1小时"数字断食"</strong>（手机放在卧室外）、用运动替代游戏的多巴胺需求</li>
-                <li>研究建议家长<strong>不要简单禁止游戏</strong>，而是帮助孩子建立"先完成责任→再享受娱乐"的秩序感</li>
+                <li>用<strong>30分钟运动替换30分钟屏幕</strong> → 抑郁风险显著降低</li>
+                <li>用<strong>30分钟睡眠替换30分钟屏幕</strong> → 同样有显著保护效果</li>
+                <li><strong>策略启示：</strong>与其"不许看手机"，不如用有趣的活动替代——运动或补觉都有效</li>
+                <li>结合上海交大此前研究，<strong>最佳顺序：先保睡眠 → 再控屏幕 → 最后加运动</strong></li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：中国临床心理学杂志，2026年第2期</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：Frontiers in Public Health，2026年5月；上海交大医学院研究</p>
 
-            <h3>3. PLOS One：中国青少年睡眠质量的性别与城乡差异</h3>
-            <p>国际期刊PLOS One发表了一项针对<strong>中国13-18岁青少年</strong>的大规模调查，揭示了睡眠质量的重要差异：<span class="source-tag verified">可信度：高</span></p>
+            <h3>3. 暑期近视"加速期"：真性近视不可逆，户外是最好的"眼药水"</h3>
+            <p>多地眼科门诊暑期迎来就诊高峰，专家强调：<span class="source-tag verified">可信度：中高</span></p>
             <ul>
-                <li><strong>性别差异：</strong>女生报告的主观睡眠质量更差（与青春期荷尔蒙变化、情绪敏感性更高有关）</li>
-                <li><strong>城乡差异：</strong>城市学生睡眠时间更短（学业压力+课外补习），但农村学生睡眠质量未必更好（受硬件条件影响）</li>
-                <li><strong>关键保护因素：</strong>规律的体育锻炼、良好的亲子关系、合理的学业期望——三者对睡眠质量的保护作用具有普适性</li>
+                <li><strong>真性近视不可逆</strong>——眼球一旦变长无法恢复，预防比治疗重要百倍</li>
+                <li><strong>每天2小时户外活动</strong>是唯一被科学证实的近视预防手段（阳光→视网膜多巴胺→抑制眼球变长）</li>
+                <li>球类运动（眼球追踪运动物体）护眼效果更佳；上午10点前/下午4点后最佳</li>
+                <li>市面上声称"治愈近视"的产品均为虚假宣传，请勿上当</li>
             </ul>
-            <p style="font-size:13px;color:var(--text-light);">来源：PLOS One journals.plos.org，2026年7月</p>
+            <p style="font-size:13px;color:var(--text-light);">来源：新华网、南京华厦眼科、长城网，2026年7月</p>
 
-            <div class="action-card"><h4>🐑 黄羊建议</h4><p>暑假还剩一个月！黄羊建议趁这段时间帮孩子建立<strong>两个黄金习惯</strong>：① <strong>下午4-6点运动：</strong>利用国家体育总局推荐的运动黄金窗口，每天至少60分钟，游泳/骑行/球类任选；② <strong>睡前1小时数字断食：</strong>手机"住"在客厅充电，用阅读、聊天或轻松的家庭活动替代屏幕时间。记住上海交大的研究结论：<strong>控屏+睡眠双达标的效果，优于单独运动达标。</strong></p></div>
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>暑假已过半！<strong>三项达标挑战赛：</strong>① 每天睡够8-10h ② 娱乐屏幕≤2h/天 ③ 每天运动≥60min。新研究的启示：<strong>与其纠结"少看手机"，不如用有趣的活动替代</strong>——游泳、跳舞、打球、爬山。每天2小时户外不光防近视，还能改善情绪！</p></div>
         </div>
-
-        <!-- ===== 推荐资源 ===== -->
         <div class="section">
             <h2><span class="emoji">📖</span>推荐资源</h2>
             <ul>
-                <li><strong>AI学习参考：</strong>天立启鸣教育AGI白皮书 — 了解AI教育最新方向，量子位有中文解读</li>
-                <li><strong>DSE升学：</strong>教育局中六学生资讯专页 edb.gov.hk/s6 — 一站式升学信息</li>
-                <li><strong>DSE升学：</strong>学友社升学辅导热线 2777 1112 — 周一至六 14:00-02:00</li>
-                <li><strong>科学运动：</strong>国家体育总局暑期青少年运动指南 — sport.gov.cn</li>
+                <li><strong>AI学习工具：</strong>Khanmigo（khanacademy.org）— GPT-4驱动，苏格拉底式辅导，支持中文，$4/月</li>
+                <li><strong>AI教育政策：</strong>教育部《"人工智能+教育"行动计划》全文 — moe.gov.cn</li>
+                <li><strong>DSE升学：</strong>JUPAS官网 jupas.edu.hk + 教育局中六专页 edb.gov.hk/s6</li>
+                <li><strong>护眼工具：</strong>20-20-20口诀 + 每天2小时户外 + 球类运动</li>
                 <li><strong>心理援助：</strong>12356（全国心理援助热线）、12355（青少年服务热线）</li>
             </ul>
         </div>
-
-        <!-- ===== 注意事项 ===== -->
         <div class="section">
             <h2><span class="emoji">⚠️</span>注意事项</h2>
             <ul>
-                <li><strong>教育AGI白皮书是行业展望，非成熟产品：</strong>白皮书提出的"破解不可能三角"是愿景，距离真正落地还有距离。家长选择AI学习工具时仍应优先有实证研究背书的成熟产品。</li>
-                <li><strong>暑期运动安全：</strong>高温天气注意防暑，避开正午烈日时段；游泳务必在有救生员的场所进行。</li>
-                <li><strong>游戏管理策略：</strong>研究建议不要简单禁止游戏（往往会适得其反），而是和孩子一起制定规则——"先做完该做的事，再享受想做的事"。</li>
-                <li><strong>信息时效说明：</strong>本文内容来自7月20-22日公开报道和研究论文，为目前可获取的最新来源。</li>
+                <li><strong>AI教育工具甄别：</strong>优先选有教育机构背书的工具（Khanmigo、MagicSchool等），避免让青少年使用未经安全过滤的通用AI对话</li>
+                <li><strong>近视不可逆：</strong>真性近视一旦发生无法恢复，任何声称"治愈近视"的产品都是骗局，唯一有效的是户外活动和科学用眼</li>
+                <li><strong>数据参考性：</strong>心理健康研究数据来自学术样本，如孩子持续两周以上情绪低落、社交退缩、睡眠严重紊乱，请及时就医</li>
+                <li><strong>信息时效：</strong>部分研究论文发表于数月前，但经近期媒体广泛报道后重新引起关注，均为当前可获取的最新权威来源</li>
             </ul>
         </div>
     </div>
-
-    <!-- ========== KID VIEW ========== -->
     <div id="kidTab" class="tab-content">
         <div class="kid-view">
-            <div class="kid-emoji-big">🏊🎮💤</div>
-
+            <div class="kid-emoji-big">🤖👁️🏃</div>
             <div class="kid-card">
-                <h2>🧠 你猜怎么着？AI马上要变成每个人的"超级家教"了</h2>
-                <p>前几天在上海的世界人工智能大会上，科学家们提出了一个超酷的想法——</p>
-                <div class="kid-highlight">📐 <strong>教育的"不可能三角"：</strong><br>个性化（只教你需要的）+ 高质量（教得特别好）+ 大规模（人人都能学）<br>以前这三件事永远只能做到两件！</div>
-                <p>但是现在，科学家们觉得<strong>AGI（通用人工智能）</strong>可以同时做到这三件事！什么意思呢？就是未来可能会有一个AI老师，它：</p>
-                <ul>
-                    <li>🎯 <strong>知道你哪里不懂</strong>（不是全班统一进度，而是你自己的节奏）</li>
-                    <li>📚 <strong>讲得特别好</strong>（像最好的补习老师那样）</li>
-                    <li>🌍 <strong>人人都用得起</strong>（不用花大钱请私教）</li>
-                </ul>
-                <p>清华的校长还说了一个很有意思的观点：以后最重要的不是<strong>"你知道多少答案"</strong>，而是<strong>"你会不会提出好问题"</strong>。因为AI可以把所有答案都告诉你——但只有你能决定问什么！</p>
-                <div class="kid-tip"><strong>💡 给你的挑战：</strong><br>下次遇到不懂的知识点，试试看你能不能提出<strong>三个不同的好问题</strong>？能找到最好的问题的人，才是未来的赢家 🏆</div>
+                <h2>🤖 你专属的AI学习伙伴来啦！</h2>
+                <p>想象一下：深夜做数学题卡住了，爸爸妈妈也不会，怎么办？</p>
+                <p>现在有一种<strong>AI学习伙伴</strong>——它不像Siri那样直接扔给你答案，而是像好朋友一样，<strong>一步步引导你自己想出来</strong>。</p>
+                <div class="kid-highlight">💡 Khanmigo（可汗学院的AI老师）会这样帮你：<br>"你觉得这道题和之前学过的什么知识有关？"<br>"试试换个角度，如果数字变小会怎样？"<br>——不直接给答案，但让你自己变聪明！</div>
+                <p>我们国家刚刚发布了《"人工智能+教育"行动计划》，以后学校里会有更多AI帮助大家学习。不是要取代老师，而是让每个人都有一个<strong>24小时在线的学习伙伴</strong>。</p>
+                <div class="kid-tip"><strong>💡 给你一个小挑战：</strong><br>下次遇到不懂的题目，试试对AI说：<strong>"不要直接给我答案，请引导我自己想出来"</strong>。看看它能不能当你的好老师！</div>
             </div>
-
             <div class="kid-card">
-                <h2>🏊 运动完睡觉特别香——这不是错觉，是国家体育总局说的！</h2>
-                <p>你有没有发现，出去玩了一整天、跑跑跳跳之后，晚上躺下就睡着了？而窝在家里刷了一天手机之后，反而翻来覆去睡不着？</p>
-                <div class="kid-highlight">🕓 国家体育总局说的"运动黄金时间"：<br><strong>下午4点到6点！</strong><br>这个时候你的身体温度最高、肌肉最灵活、运动表现最好<br>而且运动完之后身体慢慢降温的过程，正好帮你晚上入睡 🌙</div>
-                <p>科学家还发现了一个秘密：<strong>打游戏太多真的会让你睡不好！</strong>不只是因为屏幕的蓝光——更因为游戏的刺激让你的大脑一直处于"战斗状态"，很难切换到"休息模式"。</p>
-                <p>暑假还有一个月！试试这个：</p>
-                <ul>
-                    <li>🏊 下午去游泳/骑车/打球（和朋友们一起更好玩！）</li>
-                    <li>📵 睡前1小时把手机放客厅充电——不许带上床</li>
-                    <li>📖 睡前看一会儿书或者和家人聊聊天</li>
-                </ul>
-                <p>坚持一周，看看你是不是睡得更好、白天更有精神？😎</p>
-                <div class="kid-tip"><strong>💡 小秘密：</strong><br>上海交大研究了15000个中学生后发现——<strong>少看屏幕+睡够觉</strong>比单纯多运动更能让人开心！所以如果你想心情好，先从放下手机开始~</div>
+                <h2>👁️ 暑假手机刷多了？你的眼睛在喊救命！</h2>
+                <p>你知道吗？暑假是视力下降最快的时候——医生管它叫"近视加速期"。</p>
+                <div class="kid-highlight">😱 可怕的事实：<strong>真性近视一旦发生，就再也回不去了。</strong><br>眼睛不像皮肤——伤了还能修复。<br>近视 = 眼球的"永久变形"。</div>
+                <p>但有一个<strong>超级简单又免费的护眼秘籍</strong>：</p>
+                <p>👀 <strong>20-20-20法则：</strong>看屏幕20分钟 → 看6米外 → 坚持20秒</p>
+                <p>🌳 <strong>每天户外2小时：</strong>科学家反复验证——户外活动是<strong>唯一</strong>被证明能预防近视的方法！阳光让眼睛分泌多巴胺，阻止眼球变长。</p>
+                <p>简单比喻：眼睛像橡皮筋。一直看近处=一直拉橡皮筋，久了就松掉回不去。户外望远=让橡皮筋放松。</p>
+                <div class="kid-tip"><strong>💡 试试这个：</strong><br>刷完一集动画/打完一局游戏后，站起来走到窗边，<strong>数一数远处有多少棵树、多少辆车</strong>。数20秒就行！如果是在外面打球、骑车——更棒，运动+望远双倍护眼！</div>
             </div>
-
-            <div class="kid-tip"><strong>💬 和爸爸妈妈聊聊：</strong><br>如果让你当"运动部长"，给全家设计一个暑假运动计划，你会安排什么运动？什么时候做？要不要和爸妈来一场家庭运动挑战赛？🏆</div>
+            <div class="kid-tip"><strong>💬 和爸爸妈妈聊聊：</strong><br>① 你有没有用过AI学习工具？感觉怎么样？<br>② 暑假到现在，觉得自己看屏幕的时间多吗？如果每天只能看2小时娱乐屏幕，你会怎么安排？<br>③ 要不要和爸妈一起制定"下半场暑假计划"——每天2小时户外 + 试试AI学习工具？</div>
         </div>
     </div>
-
     <footer>
         <p>🐑 黄羊成长记 · 由 AI 研究助理生成</p>
         <p>内容基于多源公开信息整理，标注可信度，仅供参考</p>
