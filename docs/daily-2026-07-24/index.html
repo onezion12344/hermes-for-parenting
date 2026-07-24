@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黄羊早报 | 2026年07月24日 — 黄羊成长记</title>
+    <style>
+        :root { --bg: #fffaf5; --card-bg: #ffffff; --text: #3d3027; --text-light: #7a6e63; --accent: #e8927c; --accent-soft: #fdf0eb; --kid-accent: #7eb8da; --kid-bg: #f4f9fc; --border: #f0e3d8; --shadow: 0 2px 12px rgba(61,48,39,0.06); --radius: 14px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+        .tab-bar { display: flex; background: var(--card-bg); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); margin-bottom: 28px; position: sticky; top: 12px; z-index: 10; box-shadow: var(--shadow); }
+        .tab-btn { flex: 1; padding: 14px 8px; border: none; background: transparent; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text-light); font-family: inherit; }
+        .tab-btn.active { background: var(--accent); color: #fff; }
+        .tab-btn.kid-active { background: var(--kid-accent); color: #fff; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .breadcrumb { font-size: 13px; color: var(--text-light); margin-bottom: 20px; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .mom-header { margin-bottom: 28px; }
+        .mom-header .date { font-size: 13px; color: var(--text-light); }
+        .mom-header h1 { font-size: 26px; font-weight: 700; color: #4a3729; margin: 6px 0 12px; line-height: 1.4; }
+        .mom-header .original-q { background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--text-light); font-size: 14px; }
+        .mom-header .original-q strong { color: var(--text); font-style: normal; }
+        .section { background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
+        .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .section h2 .emoji { font-size: 22px; }
+        .section h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; color: #4a3729; }
+        .section p { margin-bottom: 8px; font-size: 15px; }
+        .section ul, .section ol { padding-left: 20px; margin-bottom: 8px; }
+        .section li { margin-bottom: 6px; font-size: 15px; }
+        .source-tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 1px 8px; border-radius: 10px; font-size: 11px; margin-left: 4px; }
+        .source-tag.verified { background: #e8f5e9; color: #2e7d32; }
+        .source-tag.gov { background: #e3f2fd; color: #1565c0; }
+        .action-card { background: linear-gradient(135deg, #fdf0eb 0%, #fff5f0 100%); border: 1px solid #f5d5c8; border-radius: var(--radius); padding: 18px 20px; margin-top: 14px; }
+        .action-card h4 { color: var(--accent); margin-bottom: 6px; }
+        .daily-summary { background: linear-gradient(135deg, #fff9e6 0%, #fff5e6 100%); border: 1px solid #f0d88a; border-radius: var(--radius); padding: 16px 20px; margin-bottom: 8px; }
+        .daily-summary h3 { color: #b8860b; margin-bottom: 4px; font-size: 15px; }
+        .daily-summary p { font-size: 14px; color: var(--text-light); margin: 0; }
+        .kid-view { font-size: 18px; line-height: 2; }
+        .kid-card { background: var(--card-bg); border: 1px solid #d8e9f4; border-radius: var(--radius); padding: 24px 22px; margin-bottom: 18px; box-shadow: var(--shadow); }
+        .kid-card h2 { font-size: 20px; color: #3a6d8c; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .kid-tip { background: var(--kid-bg); border-left: 4px solid var(--kid-accent); padding: 14px 18px; border-radius: 0 var(--radius) var(--radius) 0; margin: 14px 0; font-size: 16px; }
+        .kid-highlight { background: #fff9e0; border-radius: 10px; padding: 14px 18px; margin: 12px 0; font-size: 16px; text-align: center; font-weight: 500; }
+        .kid-emoji-big { font-size: 36px; text-align: center; margin: 16px 0; }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-light); font-size: 13px; }
+        footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 480px) {
+            .container { padding: 12px 14px 40px; }
+            .mom-header h1 { font-size: 22px; }
+            .section { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="breadcrumb"><a href="../">← 返回首页</a></div>
+    <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('mom')">👩 家长指南</button>
+        <button class="tab-btn" onclick="switchTab('kid')">👧 给孩子看</button>
+    </div>
+    <div id="momTab" class="tab-content active">
+        <div class="mom-header">
+            <div class="date">2026年07月24日 星期四</div>
+            <h1>☀️ 黄羊早报 | 2026年07月24日</h1>
+            <div class="original-q"><strong>📰 今日聚焦：</strong>国家卫健委等15部门联合启动儿童青少年「五健」计划；宁波率全国之先推出AI通识教育K12全覆盖方案；三伏天长高黄金期——黄羊为您精选今日育儿资讯。</div>
+        </div>
+        <div class="section">
+            <h2><span class="emoji">🤖</span>AI 教育新进展</h2>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>宁波全国首创AI通识教育K12全覆盖方案（幼儿园→高中）；中国教育学会发布《中小学人工智能通识教育指南》；"十五五"明确AI+教育实施路径。</p></div>
+            <h3>1. 宁波率全国之先：AI通识教育从幼儿园到高中全覆盖</h3>
+            <p>宁波市教育局近日印发AI通识教育实施方案，成为<strong>全国首个提出K12全学段AI通识教育全覆盖的城市</strong>：<span class="source-tag verified">可信度：高</span></p>
+            <ul>
+                <li><strong>幼儿园：</strong>AI启蒙游戏，通过互动体验感知AI的基本概念</li>
+                <li><strong>小学低年级（1-3年级）：</strong>AI体验课程，认识身边的AI应用（语音助手、智能推荐等）</li>
+                <li><strong>小学高年级（4-6年级）：</strong>AI初步认知，图形化编程+简单AI项目实践</li>
+                <li><strong>初中：</strong>AI原理理解+项目式学习，用AI工具解决实际问题</li>
+                <li><strong>高中：</strong>AI算法基础+伦理思辨，鼓励AI创新项目和技术选考</li>
+                <li><strong>教师：</strong>全市教师分批次完成AI教学能力培训，纳入继续教育学分</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：宁波市教育局、网易新闻，2026年7月</p>
+
+            <h3>2. 中国教育学会发布《中小学人工智能通识教育指南》</h3>
+            <p>中国教育学会联合多家顶尖高校发布全国性指南，为各地AI教育落地提供统一框架：<span class="source-tag gov">权威标准</span></p>
+            <ul>
+                <li><strong>三阶段目标：</strong>小学"感知AI"→ 初中"理解AI"→ 高中"创造AI"</li>
+                <li><strong>核心素养：</strong>AI意识、AI知识、AI技能、AI伦理、AI创新——五大维度</li>
+                <li><strong>配套资源：</strong>国标教材+开源平台+教师培训包，降低学校落地门槛</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：中国教育学会、浙江省教育考试院，2026年7月</p>
+
+            <h3>3. "十五五"规划明确AI+教育路径：从"试点"到"全面渗透"</h3>
+            <p>新华社报道，"十五五"规划明确提出利用AI改变教育模式，融入教育每一个环节。教育部此前已联合五部门发布《"人工智能+教育"行动计划》，2026年作为开局之年，各地正在加速落地。<span class="source-tag gov">官方政策</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：新华社、教育部官网，2026年7月</p>
+
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>AI教育已成国家战略，从幼儿园到高中将系统覆盖。家长关注重点：① <strong>小学阶段</strong>：让孩子通过体验认识AI，不是学编程，而是学"和AI做朋友"；② <strong>中学阶段</strong>：关注学校是否开设AI课程，鼓励孩子用AI工具辅助学习（而非代劳）；③ <strong>自己先行一步</strong>：了解AI基本概念，才能和孩子有共同语言。</p></div>
+        </div>
+        <div class="section">
+            <h2><span class="emoji">📚</span>DSE / 教育政策动态</h2>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>DSE放榜后一周：JUPAS改选已结束，全港考生进入等待期（8月5日公布结果）；媒体密集报道多元升学路径——副学士、自资院校、内地升学、海外通道一文看清。</p></div>
+            <h3>1. JUPAS改选结束一周：下一个关键日——8月5日</h3>
+            <p>距离JUPAS改选截止（7/18）已过去近一周，距离正式遴选结果公布（8/5）还有<strong>12天</strong>。全港约1.6万达"332A33"门槛考生正在等待命运揭晓。<span class="source-tag verified">可信度：高</span></p>
+            <ul>
+                <li>7月29日（下周三）：JUPAS公布残障申请人特别考虑结果</li>
+                <li>8月5日（星期三）上午9时：正式遴选结果公布——全港考生和家长的大日子</li>
+                <li>8月6日下午5时前：获录取者须缴交$5,000留位费</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：JUPAS官网、香港01，2026年7月</p>
+
+            <h3>2. DSE多元出路全解析：7条路径供家长参考</h3>
+            <p>放榜后一周，香港各大媒体密集报道DSE多元升学路径专题，强调"成绩不理想≠没出路"：<span class="source-tag verified">可信度：高</span></p>
+            <ul>
+                <li><strong>① JUPAS八大学位：</strong>约1.5万个，约1.06人争1学位</li>
+                <li><strong>② 自资学士/SSSDP：</strong>政府资助指定行业课程，护理、工程、创意工业等人才紧缺行业</li>
+                <li><strong>③ 副学士/高级文凭：</strong>2年后可衔接大学Year 3，是通往八大的"后门"</li>
+                <li><strong>④ 内地升学：</strong>内地高校免试招收港生计划（暨大、华大等）</li>
+                <li><strong>⑤ 台湾/海外升学：</strong>部分学生选择赴英国、澳洲、加拿大读大学基础年</li>
+                <li><strong>⑥ 职专教育：</strong>应用教育文凭(DAE)、职专文凭(VPC)等实用技能路线</li>
+                <li><strong>⑦ 直接就业：</strong>公务员、纪律部队、学徒计划等</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：香港01、AfterSchool、灼见名家，2026年7月</p>
+
+            <h3>3. 自资院校热门学科一览：恒大、方大、都大、东华</h3>
+            <p>香港01教育频道盘点4所主要自资院校的热门学科及收生要求：恒生大学（商科/传播）、方大树仁（社工/心理）、都会大学（护理/创意艺术）、东华学院（护理/医疗科学）。<span class="source-tag verified">可信度：中高</span></p>
+
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p>如果家有DSE考生正在等待8/5结果：① 这段时间可以<strong>和孩子一起了解Plan B/C/D</strong>——万一JUPAS不理想，副学士、自资、内地升学都是好选择；② <strong>心态比分数重要</strong>：DSE只是人生一站，今年有超过7条正规升学路径；③ 如果家里有低年级孩子，<strong>提前了解DSE路径有备无患</strong>。</p></div>
+        </div>
+        <div class="section">
+            <h2><span class="emoji">💪</span>青少年健康知识</h2>
+            <div class="daily-summary"><h3>📌 一句话总结</h3><p>国家15部门联合启动「五健」计划（2026-2030），覆盖肥胖、近视、心理、脊柱、口腔五大领域；三伏天长高黄金期——科学证实：睡眠比补钙更重要！</p></div>
+            <h3>1. 重磅：国家15部门联合启动儿童青少年"五健"促进行动计划 <span class="source-tag gov">国家级政策</span></h3>
+            <p>国家卫健委、教育部等15个部门联合印发《儿童青少年"五健"促进行动计划（2026—2030年）》，这是中国首个针对儿童青少年身心健康的综合性国家行动计划：<span class="source-tag verified">可信度：高</span></p>
+            <ul>
+                <li><strong>"五健"指哪五健？</strong>① 健体（控制肥胖、增强体质）② 健眼（近视防控）③ 健心（心理健康促进）④ 健脊（脊柱侧弯防控）⑤ 健齿（口腔健康）</li>
+                <li><strong>核心目标：</strong>到2030年，儿童青少年超重肥胖率年均增幅下降70%，近视率每年降低0.5个百分点以上，心理健康素养水平达50%</li>
+                <li><strong>关键措施：</strong>每天校内校外各1小时体育锻炼、每年至少2次视力筛查、中小学100%配备心理辅导室、脊柱侧弯纳入学生体检常规项目</li>
+                <li><strong>家长责任：</strong>将家庭健康监测纳入学校-家庭联动体系，家长需配合记录孩子作息、饮食、屏幕时间</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：国家卫健委 nhc.gov.cn、新华社、中国政府网，2026年7月</p>
+
+            <h3>2. 三伏天长高黄金期：睡眠比补钙更重要！</h3>
+            <p>夏季日照充足、新陈代谢旺盛，是三伏天"追高"的最佳季节。专家强调一个被很多家长忽视的关键：<span class="source-tag verified">可信度：中高</span></p>
+            <ul>
+                <li><strong>睡眠 > 补钙：</strong>生长激素在深度睡眠时分泌最高（晚10点-凌晨2点是黄金时段），<strong>充足睡眠比盲目补钙更关键</strong></li>
+                <li><strong>3大核心营养素：</strong>优质蛋白质（蛋/奶/鱼）、维生素D（晒太阳15-20分钟/天）、钙（牛奶/豆腐/绿叶菜）——三者协同才有效</li>
+                <li><strong>常见误区：</strong>骨头汤不补钙（每100ml仅2-5mg钙）；保健品不能替代正常饮食；身高异常需查骨龄而非盲目进补</li>
+                <li><strong>运动追高：</strong>跳绳、篮球、游泳等纵向运动最有效，每天30-60分钟</li>
+            </ul>
+            <p style="font-size:13px;color:var(--text-light);">来源：家医大健康、湖北省卫健委、新华网，2026年7月</p>
+
+            <h3>3. 《中国青少年运动长高蓝皮书》正式发布 <span class="source-tag verified">可信度：高</span></h3>
+            <p>新华网报道，首部《中国青少年运动长高蓝皮书》正式发布，产学研协同构建"运动追高"体系。蓝皮书首次系统梳理了运动对身高促进的科学证据，推荐跳绳、篮球、游泳为三大"追高运动"。<span class="source-tag verified">可信度：中高</span></p>
+            <p style="font-size:13px;color:var(--text-light);">来源：新华网，2026年7月</p>
+
+            <div class="action-card"><h4>🐑 黄羊建议</h4><p><strong>暑假"五健"行动清单：</strong>① 健体——每天≥60分钟运动，三伏天优先早晚运动避开正午；② 健眼——每天户外≥2小时+20-20-20法则；③ 健心——每天15分钟"无评判倾听"，关注孩子情绪变化；④ 健脊——注意坐姿和书包重量，如发现肩膀高低不平及时筛查；⑤ 健齿——暑假是看牙的好时机。记住：<strong>暑假=身高增长黄金窗口，睡眠比补钙更重要！</strong></p></div>
+        </div>
+        <div class="section">
+            <h2><span class="emoji">📖</span>推荐资源</h2>
+            <ul>
+                <li><strong>AI教育权威指南：</strong>中国教育学会《中小学人工智能通识教育指南》（各省教育考试院可查）</li>
+                <li><strong>DSE多元出路：</strong>JUPAS官网 jupas.edu.hk + 香港01 DSE专区</li>
+                <li><strong>"五健"计划原文：</strong>国家卫健委官网 nhc.gov.cn 搜索"五健促进行动计划"</li>
+                <li><strong>追高运动推荐：</strong>跳绳（每天500-1000个）、篮球（30分钟/次）、游泳（每周2-3次）</li>
+                <li><strong>心理援助：</strong>12356（全国心理援助热线）、12355（青少年服务热线）</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2><span class="emoji">⚠️</span>注意事项</h2>
+            <ul>
+                <li><strong>"五健"计划刚刚启动：</strong>各地落地时间不同，家长可先自行落实五项健康指标，不必等学校通知</li>
+                <li><strong>长高不能"速成"：</strong>任何声称"快速增高"的产品都是骗局，身高增长需要科学饮食+睡眠+运动+耐心；如年增长<5cm应及时就医查骨龄</li>
+                <li><strong>AI教育≠让孩子报编程班：</strong>AI通识教育核心是培养AI意识和批判性思维，不是学写代码。小学生先从"认识身边的AI"开始</li>
+                <li><strong>信息时效：</strong>部分研究论文发表于数月前，但经国家级政策发布和媒体广泛报道后具有最新参考价值</li>
+            </ul>
+        </div>
+    </div>
+    <div id="kidTab" class="tab-content">
+        <div class="kid-view">
+            <div class="kid-emoji-big">🏀😴🌞</div>
+            <div class="kid-card">
+                <h2>🌞 三伏天长高秘籍：睡觉比吃钙片厉害多了！</h2>
+                <p>暑假已经过半，你每天都在做什么呢？打机？刷片？还是……<strong>偷偷长高？</strong></p>
+                <div class="kid-highlight">🤫 告诉你一个秘密：<strong>睡觉比吃钙片更能帮你长高！</strong><br>因为长高靠的是"生长激素"，而它只在<strong>你睡着的时候</strong>才会大量分泌！<br>尤其是晚上10点到凌晨2点——错过这个时间，就等于错过了一整天的"长高机会"。</div>
+                <p>科学家说，夏天是一年里长得最快的季节。因为太阳好、代谢快，再加上正确的运动，就像给身体按了"加速键"！</p>
+                <p><strong>长高"三件套"：</strong></p>
+                <p>🌙 <strong>睡好：</strong>10点前上床，睡够8-10小时（这个最重要！）</p>
+                <p>🏀 <strong>动对：</strong>跳绳、打篮球、游泳——这些"向上跳""向上够"的运动最助长高</p>
+                <p>🥛 <strong>吃对：</strong>每天1杯奶+1个蛋+晒太阳15分钟，骨头才有"建材"</p>
+                <p>专家还发布了中国第一本《运动长高蓝皮书》，里面说跳绳是最简单高效的追高运动——每天500到1000个就行！</p>
+                <div class="kid-tip"><strong>💡 暑假下半场挑战：</strong><br>每天10点前睡 + 每天跳绳500个 + 每天喝一杯奶。<br>坚持两周，看看开学有没有比同学多长高一点？😉</div>
+            </div>
+            <div class="kid-card">
+                <h2>🤖 以后连幼儿园小朋友都要学AI了！</h2>
+                <p>宁波（就是那个有很好吃的汤圆的地方）刚刚宣布：<strong>从幼儿园到高中，所有学生都要学AI！</strong></p>
+                <p>不过别担心——不是让你写代码！</p>
+                <div class="kid-highlight">🎮 小学生学AI = 认识身边的AI（Siri为什么能听懂你说话？抖音怎么知道你想看什么？）<br>🔬 中学生学AI = 用AI解决实际问题（比如用AI分析自己学校的垃圾分类数据）</div>
+                <p>国家还发布了《AI通识教育指南》，里面说孩子不用都去上编程班。更重要的是学会：</p>
+                <p>① <strong>AI能帮我做什么？</strong>（善用工具）</p>
+                <p>② <strong>AI不能帮我做什么？</strong>（不依赖、不代劳）</p>
+                <p>③ <strong>AI做错事怎么办？</strong>（批判思维——AI也会犯错！）</p>
+                <div class="kid-tip"><strong>💡 试试看：</strong><br>今天找一个AI工具，问它一个问题，然后<strong>自己再查资料验证它的答案对不对</strong>。看看AI比你聪明在哪里，又比你差在哪里？</div>
+            </div>
+            <div class="kid-tip"><strong>💬 和爸爸妈妈聊聊：</strong><br>① 你觉得"睡觉"和"补钙"哪个对长高更重要？为什么？（提示：答案在上面 👆）<br>② 你有没有用过AI聊天？感觉它聪明吗？有没有发现它犯过错误？<br>③ 要不要和爸妈一起做一个"暑假下半场计划"：每天跳绳+早睡+学一个新东西？</div>
+        </div>
+    </div>
+    <footer>
+        <p>🐑 黄羊成长记 · 由 AI 研究助理生成</p>
+        <p>内容基于多源公开信息整理，标注可信度，仅供参考</p>
+        <p><a href="../">查看全部话题 →</a></p>
+    </footer>
+</div>
+<script>
+function switchTab(tab) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','kid-active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    if (tab === 'mom') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('momTab').classList.add('active');
+    } else {
+        document.querySelectorAll('.tab-btn')[1].classList.add('kid-active');
+        document.getElementById('kidTab').classList.add('active');
+    }
+}
+</script>
+</body>
+</html>
